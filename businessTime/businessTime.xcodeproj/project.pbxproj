@@ -44,6 +44,7 @@
 		50ADCCBA1ECA4CD000AA37F3 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		50ADCCBC1ECA4D4F00AA37F3 /* MeetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupViewController.h; sourceTree = "<group>"; };
 		50ADCCBD1ECA4D4F00AA37F3 /* MeetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupViewController.m; sourceTree = "<group>"; };
+		50ADCCBF1ECA653100AA37F3 /* MeetupToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetupToken.h; sourceTree = "<group>"; };
 		7F2100531ECA2DD80034A100 /* businessTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = businessTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2100571ECA2DD80034A100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F2100591ECA2DD80034A100 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				7F2100781ECA44A20034A100 /* MeetupToken.h */,
+				50ADCCBF1ECA653100AA37F3 /* MeetupToken.h */,
 				7F2100571ECA2DD80034A100 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -216,7 +218,7 @@
 				TargetAttributes = {
 					7F2100521ECA2DD80034A100 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2E5N5854VJ;
+						DevelopmentTeam = UG659HW99G;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -395,7 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2E5N5854VJ;
+				DEVELOPMENT_TEAM = UG659HW99G;
 				INFOPLIST_FILE = businessTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.businessTime;
@@ -407,7 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2E5N5854VJ;
+				DEVELOPMENT_TEAM = UG659HW99G;
 				INFOPLIST_FILE = businessTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.businessTime;
