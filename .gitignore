@@ -1,6 +1,10 @@
 
 # Created by https://www.gitignore.io/api/macos,swift,xcode,objective-c
 
+MeetupToken.h
+*/MeetupToken.h
+*/Supporting Files/MeetupToken.h
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
