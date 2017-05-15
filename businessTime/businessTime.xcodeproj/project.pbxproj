@@ -29,6 +29,7 @@
 		7F21006E1ECA2E360034A100 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7F2100731ECA2EAD0034A100 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		7F2100741ECA2EAD0034A100 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		7F2100781ECA44A20034A100 /* MeetupToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetupToken.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		7F2100561ECA2DD80034A100 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7F2100781ECA44A20034A100 /* MeetupToken.h */,
 				7F2100571ECA2DD80034A100 /* main.m */,
 			);
 			name = "Supporting Files";
