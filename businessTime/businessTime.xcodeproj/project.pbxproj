@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5014A69D1ECB833A00C3C36A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */; };
+		5014A6A21ECBAE5B00C3C36A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */; };
 		50ADCCAC1ECA49FF00AA37F3 /* CardCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */; };
 		50ADCCAF1ECA4A1800AA37F3 /* MyCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCAE1ECA4A1800AA37F3 /* MyCards.m */; };
 		50ADCCB21ECA4A3400AA37F3 /* Meetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCB11ECA4A3400AA37F3 /* Meetup.m */; };
@@ -15,10 +17,6 @@
 		50ADCCBB1ECA4CD000AA37F3 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCBA1ECA4CD000AA37F3 /* UserViewController.m */; };
 		50ADCCBE1ECA4D4F00AA37F3 /* MeetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCBD1ECA4D4F00AA37F3 /* MeetupViewController.m */; };
 		50ADCCC61ECA750500AA37F3 /* AuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCC51ECA750500AA37F3 /* AuthManager.m */; };
-		50ADCCC71ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; };
-		50ADCCC81ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		50ADCCC91ECA8C1600AA37F3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; };
-		50ADCCCA1ECA8C1600AA37F3 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F2100581ECA2DD80034A100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2100571ECA2DD80034A100 /* main.m */; };
 		7F21005B1ECA2DD80034A100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F21005A1ECA2DD80034A100 /* AppDelegate.m */; };
 		7F2100611ECA2DD80034A100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F21005F1ECA2DD80034A100 /* Main.storyboard */; };
@@ -34,18 +32,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-
 		7F2100941ECA98690034A100 /* Embed Frameworks */ = {
-
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-
 				7F2100931ECA98690034A100 /* AFOAuth2Manager.framework in Embed Frameworks */,
 				7F2100961ECA986C0034A100 /* AFNetworking.framework in Embed Frameworks */,
-
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +47,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5014A69B1ECB833A00C3C36A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		5014A69E1ECBAE0D00C3C36A /* businessTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = businessTime.entitlements; sourceTree = "<group>"; };
+		5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		50ADCCAA1ECA49FF00AA37F3 /* CardCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCreator.h; sourceTree = "<group>"; };
 		50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCreator.m; sourceTree = "<group>"; };
 		50ADCCAD1ECA4A1800AA37F3 /* MyCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCards.h; sourceTree = "<group>"; };
@@ -94,9 +92,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F2100991ECB6A330034A100 /* SafariServices.framework in Frameworks */,
+				5014A6A21ECBAE5B00C3C36A /* CloudKit.framework in Frameworks */,
 				7F2100921ECA98690034A100 /* AFOAuth2Manager.framework in Frameworks */,
 				7F2100951ECA986C0034A100 /* AFNetworking.framework in Frameworks */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +123,7 @@
 		7F2100551ECA2DD80034A100 /* businessTime */ = {
 			isa = PBXGroup;
 			children = (
+				5014A69E1ECBAE0D00C3C36A /* businessTime.entitlements */,
 				7F2100721ECA2E4D0034A100 /* Models */,
 				7F2100711ECA2E4C0034A100 /* Views */,
 				7F2100701ECA2E490034A100 /* Controllers */,
@@ -148,6 +147,8 @@
 		7F2100701ECA2E490034A100 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5014A69B1ECB833A00C3C36A /* WelcomeViewController.h */,
+				5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */,
 				7F21006D1ECA2E360034A100 /* HomeViewController.h */,
 				7F21006E1ECA2E360034A100 /* HomeViewController.m */,
 				50ADCCB31ECA4CB100AA37F3 /* CardCreatorViewController.h */,
@@ -193,6 +194,7 @@
 		7F2100971ECB6A330034A100 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */,
 				7F2100981ECB6A330034A100 /* SafariServices.framework */,
 			);
 			name = Frameworks;
@@ -209,7 +211,6 @@
 				7F2100501ECA2DD80034A100 /* Frameworks */,
 				7F2100511ECA2DD80034A100 /* Resources */,
 				7F2100941ECA98690034A100 /* Embed Frameworks */,
-
 			);
 			buildRules = (
 			);
@@ -231,8 +232,16 @@
 				TargetAttributes = {
 					7F2100521ECA2DD80034A100 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2E5N5854VJ;
+						DevelopmentTeam = UG659HW99G;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -272,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5014A69D1ECB833A00C3C36A /* WelcomeViewController.m in Sources */,
 				7F2100751ECA2EAD0034A100 /* User.m in Sources */,
 				50ADCCC61ECA750500AA37F3 /* AuthManager.m in Sources */,
 				50ADCCBB1ECA4CD000AA37F3 /* UserViewController.m in Sources */,
@@ -405,14 +415,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2E5N5854VJ;
+				CODE_SIGN_ENTITLEMENTS = businessTime/businessTime.entitlements;
+				DEVELOPMENT_TEAM = UG659HW99G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = businessTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.businessTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evedenison.businessTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -421,14 +432,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2E5N5854VJ;
+				CODE_SIGN_ENTITLEMENTS = businessTime/businessTime.entitlements;
+				DEVELOPMENT_TEAM = UG659HW99G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = businessTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.businessTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evedenison.businessTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

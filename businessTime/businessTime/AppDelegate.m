@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AuthManager.h"
+#import <CloudKit/CloudKit.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self iCloudUserIDAsync];
     return YES;
 }
 
@@ -26,6 +28,19 @@
     [AuthManager processOAuthStep1Response:url];
     
     return YES;
+}
+
+-(void)iCloudUserIDAsync {
+    CKContainer *container = CKContainer.defaultContainer;
+    [container fetchUserRecordIDWithCompletionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error fetching iCloud token: %@", error.localizedDescription);
+        } else {
+           NSLog(@"iCLOUD TOKEN: %@", recordID.description);
+        }
+       
+    }];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
