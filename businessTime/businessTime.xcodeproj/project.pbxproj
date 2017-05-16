@@ -26,17 +26,25 @@
 		7F2100661ECA2DD80034A100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2100641ECA2DD80034A100 /* LaunchScreen.storyboard */; };
 		7F21006F1ECA2E360034A100 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F21006E1ECA2E360034A100 /* HomeViewController.m */; };
 		7F2100751ECA2EAD0034A100 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2100741ECA2EAD0034A100 /* User.m */; };
+		7F2100921ECA98690034A100 /* AFOAuth2Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; };
+		7F2100931ECA98690034A100 /* AFOAuth2Manager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F2100951ECA986C0034A100 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; };
+		7F2100961ECA986C0034A100 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		50ADCCCB1ECA8C1600AA37F3 /* Embed Frameworks */ = {
+
+		7F2100941ECA98690034A100 /* Embed Frameworks */ = {
+
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				50ADCCC81ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Embed Frameworks */,
-				50ADCCCA1ECA8C1600AA37F3 /* AFNetworking.framework in Embed Frameworks */,
+
+				7F2100931ECA98690034A100 /* AFOAuth2Manager.framework in Embed Frameworks */,
+				7F2100961ECA986C0034A100 /* AFNetworking.framework in Embed Frameworks */,
+
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,8 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50ADCCC71ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Frameworks */,
-				50ADCCC91ECA8C1600AA37F3 /* AFNetworking.framework in Frameworks */,
+				7F2100921ECA98690034A100 /* AFOAuth2Manager.framework in Frameworks */,
+				7F2100951ECA986C0034A100 /* AFNetworking.framework in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +196,8 @@
 				7F21004F1ECA2DD80034A100 /* Sources */,
 				7F2100501ECA2DD80034A100 /* Frameworks */,
 				7F2100511ECA2DD80034A100 /* Resources */,
-				50ADCCCB1ECA8C1600AA37F3 /* Embed Frameworks */,
+				7F2100941ECA98690034A100 /* Embed Frameworks */,
+
 			);
 			buildRules = (
 			);
@@ -209,7 +219,7 @@
 				TargetAttributes = {
 					7F2100521ECA2DD80034A100 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UG659HW99G;
+						DevelopmentTeam = 2E5N5854VJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -383,7 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG659HW99G;
+				DEVELOPMENT_TEAM = 2E5N5854VJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -399,7 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG659HW99G;
+				DEVELOPMENT_TEAM = 2E5N5854VJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

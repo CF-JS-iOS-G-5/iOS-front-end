@@ -10,4 +10,7 @@
 
 @interface AuthManager : NSObject
 
+//+ (instancetype)baseURL;
++(void)getMeetupToken;
+
 @end
