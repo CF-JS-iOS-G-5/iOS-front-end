@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5014A69D1ECB833A00C3C36A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */; };
+		5014A6A21ECBAE5B00C3C36A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */; };
 		50ADCCAC1ECA49FF00AA37F3 /* CardCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */; };
 		50ADCCAF1ECA4A1800AA37F3 /* MyCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCAE1ECA4A1800AA37F3 /* MyCards.m */; };
 		50ADCCB21ECA4A3400AA37F3 /* Meetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCB11ECA4A3400AA37F3 /* Meetup.m */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		5014A69B1ECB833A00C3C36A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		5014A69E1ECBAE0D00C3C36A /* businessTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = businessTime.entitlements; sourceTree = "<group>"; };
+		5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		50ADCCAA1ECA49FF00AA37F3 /* CardCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCreator.h; sourceTree = "<group>"; };
 		50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCreator.m; sourceTree = "<group>"; };
 		50ADCCAD1ECA4A1800AA37F3 /* MyCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCards.h; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F2100991ECB6A330034A100 /* SafariServices.framework in Frameworks */,
+				5014A6A21ECBAE5B00C3C36A /* CloudKit.framework in Frameworks */,
 				7F2100921ECA98690034A100 /* AFOAuth2Manager.framework in Frameworks */,
 				7F2100951ECA986C0034A100 /* AFNetworking.framework in Frameworks */,
 			);
@@ -119,6 +123,7 @@
 		7F2100551ECA2DD80034A100 /* businessTime */ = {
 			isa = PBXGroup;
 			children = (
+				5014A69E1ECBAE0D00C3C36A /* businessTime.entitlements */,
 				7F2100721ECA2E4D0034A100 /* Models */,
 				7F2100711ECA2E4C0034A100 /* Views */,
 				7F2100701ECA2E490034A100 /* Controllers */,
@@ -189,6 +194,7 @@
 		7F2100971ECB6A330034A100 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */,
 				7F2100981ECB6A330034A100 /* SafariServices.framework */,
 			);
 			name = Frameworks;
@@ -228,6 +234,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UG659HW99G;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -401,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = businessTime/businessTime.entitlements;
 				DEVELOPMENT_TEAM = UG659HW99G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,7 +423,7 @@
 				);
 				INFOPLIST_FILE = businessTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.businessTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evedenison.businessTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -417,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = businessTime/businessTime.entitlements;
 				DEVELOPMENT_TEAM = UG659HW99G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,7 +440,7 @@
 				);
 				INFOPLIST_FILE = businessTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.businessTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evedenison.businessTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
