@@ -14,9 +14,11 @@
 		50ADCCB81ECA4CC000AA37F3 /* MyCardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCB71ECA4CC000AA37F3 /* MyCardsViewController.m */; };
 		50ADCCBB1ECA4CD000AA37F3 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCBA1ECA4CD000AA37F3 /* UserViewController.m */; };
 		50ADCCBE1ECA4D4F00AA37F3 /* MeetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCBD1ECA4D4F00AA37F3 /* MeetupViewController.m */; };
-		50ADCCC11ECA6DC700AA37F3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; };
-		50ADCCC31ECA743900AA37F3 /* AFOAuth2Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; };
 		50ADCCC61ECA750500AA37F3 /* AuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCC51ECA750500AA37F3 /* AuthManager.m */; };
+		50ADCCC71ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; };
+		50ADCCC81ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50ADCCC91ECA8C1600AA37F3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; };
+		50ADCCCA1ECA8C1600AA37F3 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F2100581ECA2DD80034A100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2100571ECA2DD80034A100 /* main.m */; };
 		7F21005B1ECA2DD80034A100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F21005A1ECA2DD80034A100 /* AppDelegate.m */; };
 		7F2100611ECA2DD80034A100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F21005F1ECA2DD80034A100 /* Main.storyboard */; };
@@ -25,6 +27,21 @@
 		7F21006F1ECA2E360034A100 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F21006E1ECA2E360034A100 /* HomeViewController.m */; };
 		7F2100751ECA2EAD0034A100 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2100741ECA2EAD0034A100 /* User.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50ADCCCB1ECA8C1600AA37F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50ADCCC81ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Embed Frameworks */,
+				50ADCCCA1ECA8C1600AA37F3 /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50ADCCAA1ECA49FF00AA37F3 /* CardCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCreator.h; sourceTree = "<group>"; };
@@ -66,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50ADCCC31ECA743900AA37F3 /* AFOAuth2Manager.framework in Frameworks */,
-				50ADCCC11ECA6DC700AA37F3 /* AFNetworking.framework in Frameworks */,
+				50ADCCC71ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Frameworks */,
+				50ADCCC91ECA8C1600AA37F3 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +187,7 @@
 				7F21004F1ECA2DD80034A100 /* Sources */,
 				7F2100501ECA2DD80034A100 /* Frameworks */,
 				7F2100511ECA2DD80034A100 /* Resources */,
+				50ADCCCB1ECA8C1600AA37F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
