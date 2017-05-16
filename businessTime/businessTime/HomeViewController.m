@@ -11,7 +11,7 @@
 #import "MeetupToken.h"
 #import <SafariServices/SafariServices.h>
 
-@interface HomeViewController () <SFSafariViewControllerDelegate>
+@interface HomeViewController () 
 
 @end
 
@@ -22,19 +22,6 @@
     
 }
 
-- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
-    [self dismissViewControllerAnimated:true completion:nil];
-}
-
-- (IBAction)loginButtonPressed:(id)sender {
-    
-    NSString *authPath = @"https://secure.meetup.com/oauth2/authorize?client_id=93f0rhae311pei09pvejtujope&response_type=code&redirect_uri=businessTime://";
-    NSURL *baseURL = [NSURL URLWithString:authPath];
-    SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:baseURL];
-    svc.delegate = self;
-    [self presentViewController:svc animated:YES completion:nil];
-
-}
 
 
 @end

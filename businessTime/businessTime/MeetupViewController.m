@@ -7,8 +7,11 @@
 //
 
 #import "MeetupViewController.h"
+#import "AuthManager.h"
+#import "MeetupToken.h"
+#import <SafariServices/SafariServices.h>
 
-@interface MeetupViewController ()
+@interface MeetupViewController () <SFSafariViewControllerDelegate>
 
 @end
 
@@ -18,20 +21,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)loginButtonPressed:(id)sender {
+    
+    NSString *authPath = @"https://secure.meetup.com/oauth2/authorize?client_id=93f0rhae311pei09pvejtujope&response_type=code&redirect_uri=businessTime://";
+    NSURL *baseURL = [NSURL URLWithString:authPath];
+    SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:baseURL];
+    svc.delegate = self;
+    [self presentViewController:svc animated:YES completion:nil];
+    
 }
-*/
 
 @end
