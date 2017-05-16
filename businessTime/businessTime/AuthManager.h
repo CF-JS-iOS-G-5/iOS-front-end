@@ -10,7 +10,6 @@
 
 @interface AuthManager : NSObject
 
-//+ (instancetype)baseURL;
-+(void)getMeetupToken;
++ (void)processOAuthStep1Response: (NSURL *)url;
 
 @end
