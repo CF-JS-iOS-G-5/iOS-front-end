@@ -15,6 +15,10 @@
 		50ADCCBB1ECA4CD000AA37F3 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCBA1ECA4CD000AA37F3 /* UserViewController.m */; };
 		50ADCCBE1ECA4D4F00AA37F3 /* MeetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCBD1ECA4D4F00AA37F3 /* MeetupViewController.m */; };
 		50ADCCC61ECA750500AA37F3 /* AuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCC51ECA750500AA37F3 /* AuthManager.m */; };
+		50ADCCC71ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; };
+		50ADCCC81ECA8C1600AA37F3 /* AFOAuth2Manager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50ADCCC91ECA8C1600AA37F3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; };
+		50ADCCCA1ECA8C1600AA37F3 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F2100581ECA2DD80034A100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2100571ECA2DD80034A100 /* main.m */; };
 		7F21005B1ECA2DD80034A100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F21005A1ECA2DD80034A100 /* AppDelegate.m */; };
 		7F2100611ECA2DD80034A100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F21005F1ECA2DD80034A100 /* Main.storyboard */; };
@@ -29,14 +33,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+
 		7F2100941ECA98690034A100 /* Embed Frameworks */ = {
+
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+
 				7F2100931ECA98690034A100 /* AFOAuth2Manager.framework in Embed Frameworks */,
 				7F2100961ECA986C0034A100 /* AFNetworking.framework in Embed Frameworks */,
+
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +93,7 @@
 			files = (
 				7F2100921ECA98690034A100 /* AFOAuth2Manager.framework in Frameworks */,
 				7F2100951ECA986C0034A100 /* AFNetworking.framework in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +197,7 @@
 				7F2100501ECA2DD80034A100 /* Frameworks */,
 				7F2100511ECA2DD80034A100 /* Resources */,
 				7F2100941ECA98690034A100 /* Embed Frameworks */,
+
 			);
 			buildRules = (
 			);
