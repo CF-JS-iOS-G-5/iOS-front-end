@@ -37,12 +37,68 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t45-ZB-x40" secondAttribute="bottom" constant="319" id="yfI-lm-SPC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="hqP-nI-4sL" kind="show" identifier="HomeViewController" id="MMj-GI-NND"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="108.39580209895054"/>
         </scene>
-        <!--Item-->
+        <!--Welcome View Controller-->
+        <scene sceneID="f9m-Le-ovS">
+            <objects>
+                <viewController id="hqP-nI-4sL" customClass="WelcomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ims-Tg-sIb"/>
+                        <viewControllerLayoutGuide type="bottom" id="UGc-vM-Fry"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x5t-cq-EcS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Business Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPo-M4-3GH">
+                                <rect key="frame" x="67.5" y="139" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaN-aO-bvX">
+                                <rect key="frame" x="109" y="230" width="157" height="38"/>
+                                <color key="backgroundColor" red="0.17539438579355549" green="0.063950436017711831" blue="0.64623651649746194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="CREATE A CARD">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vG-uk-jd2">
+                                <rect key="frame" x="132" y="365" width="111" height="39"/>
+                                <color key="backgroundColor" red="0.17539438579355549" green="0.063950436017711831" blue="0.64623651649746194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="MY CARDS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="QaN-aO-bvX" secondAttribute="bottom" constant="399" id="3rg-91-NNb"/>
+                            <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="3vG-uk-jd2" secondAttribute="bottom" constant="263" id="8HM-PZ-S71"/>
+                            <constraint firstItem="TPo-M4-3GH" firstAttribute="centerY" secondItem="x5t-cq-EcS" secondAttribute="centerY" constant="-184" id="ISd-3S-SW8"/>
+                            <constraint firstItem="TPo-M4-3GH" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" constant="-17" id="Y4D-rx-41H"/>
+                            <constraint firstItem="QaN-aO-bvX" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" id="elm-dO-8vr"/>
+                            <constraint firstItem="3vG-uk-jd2" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" id="gyD-1G-3x0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="tw3-Aq-YQA" kind="show" identifier="WelcomeViewController" id="zWZ-Bh-1lI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2aQ-Yk-tdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.60000000000002" y="107.49625187406298"/>
+        </scene>
+        <!--Card Creator View Controller-->
         <scene sceneID="iBW-qg-2Tl">
             <objects>
                 <viewController id="tw3-Aq-YQA" customClass="CardCreatorViewController" sceneMemberID="viewController">
@@ -55,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzI-N9-PzZ">
-                                <rect key="frame" x="8" y="50" width="359" height="227"/>
+                                <rect key="frame" x="8" y="50" width="359" height="276"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6j-Ii-Nh9">
                                         <rect key="frame" x="8" y="8" width="86" height="30"/>
@@ -125,12 +181,14 @@
                                     <constraint firstItem="Fws-wr-5G0" firstAttribute="leading" secondItem="EFX-fP-zd2" secondAttribute="trailing" constant="26" id="yot-ST-kKd"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRa-xX-G4N">
-                                <rect key="frame" x="130" y="445" width="115" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRa-xX-G4N">
+                                <rect key="frame" x="146" y="490" width="83" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save Card"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-z5-UCy">
-                                <rect key="frame" x="139" y="339" width="97" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-z5-UCy">
+                                <rect key="frame" x="130.5" y="382" width="114" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Update Card"/>
                             </button>
                         </subviews>
@@ -147,28 +205,10 @@
                             <constraint firstItem="lzI-N9-PzZ" firstAttribute="leading" secondItem="DDZ-MY-hfx" secondAttribute="leading" constant="8" id="qvY-vj-27f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="s3F-Y2-xeA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0h-kR-sQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="107.49625187406298"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="4X1-TO-XCo">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Y5J-4h-pS7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Gy9-bv-NXF">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="tw3-Aq-YQA" kind="relationship" relationship="viewControllers" id="dPr-O0-04b"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eXy-kL-FgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1062" y="108"/>
+            <point key="canvasLocation" x="1839" y="108"/>
         </scene>
     </scenes>
 </document>

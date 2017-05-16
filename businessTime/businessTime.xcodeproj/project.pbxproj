@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5014A69D1ECB833A00C3C36A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */; };
 		50ADCCAC1ECA49FF00AA37F3 /* CardCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */; };
 		50ADCCAF1ECA4A1800AA37F3 /* MyCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCAE1ECA4A1800AA37F3 /* MyCards.m */; };
 		50ADCCB21ECA4A3400AA37F3 /* Meetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCB11ECA4A3400AA37F3 /* Meetup.m */; };
@@ -45,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5014A69B1ECB833A00C3C36A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		50ADCCAA1ECA49FF00AA37F3 /* CardCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCreator.h; sourceTree = "<group>"; };
 		50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCreator.m; sourceTree = "<group>"; };
 		50ADCCAD1ECA4A1800AA37F3 /* MyCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCards.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 		7F2100701ECA2E490034A100 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5014A69B1ECB833A00C3C36A /* WelcomeViewController.h */,
+				5014A69C1ECB833A00C3C36A /* WelcomeViewController.m */,
 				7F21006D1ECA2E360034A100 /* HomeViewController.h */,
 				7F21006E1ECA2E360034A100 /* HomeViewController.m */,
 				50ADCCB31ECA4CB100AA37F3 /* CardCreatorViewController.h */,
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5014A69D1ECB833A00C3C36A /* WelcomeViewController.m in Sources */,
 				7F2100751ECA2EAD0034A100 /* User.m in Sources */,
 				50ADCCC61ECA750500AA37F3 /* AuthManager.m in Sources */,
 				50ADCCBB1ECA4CD000AA37F3 /* UserViewController.m in Sources */,
