@@ -26,6 +26,7 @@
 		7F2100931ECA98690034A100 /* AFOAuth2Manager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F2100951ECA986C0034A100 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; };
 		7F2100961ECA986C0034A100 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F2100991ECB6A330034A100 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2100981ECB6A330034A100 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +77,7 @@
 		7F2100731ECA2EAD0034A100 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		7F2100741ECA2EAD0034A100 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		7F2100781ECA44A20034A100 /* MeetupToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetupToken.h; sourceTree = "<group>"; };
+		7F2100981ECB6A330034A100 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2100991ECB6A330034A100 /* SafariServices.framework in Frameworks */,
 				7F2100921ECA98690034A100 /* AFOAuth2Manager.framework in Frameworks */,
 				7F2100951ECA986C0034A100 /* AFNetworking.framework in Frameworks */,
 			);
@@ -98,6 +101,7 @@
 				7F2100541ECA2DD80034A100 /* Products */,
 				50ADCCC21ECA743900AA37F3 /* AFOAuth2Manager.framework */,
 				50ADCCC01ECA6DC700AA37F3 /* AFNetworking.framework */,
+				7F2100971ECB6A330034A100 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +179,14 @@
 				50ADCCB11ECA4A3400AA37F3 /* Meetup.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		7F2100971ECB6A330034A100 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F2100981ECB6A330034A100 /* SafariServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
