@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface User : NSObject
 
 @property(strong, nonatomic)NSNumber *userId;
 @property(strong, nonatomic)NSString *iToken;
+@property(strong, nonatomic)NSArray<UIImage *> *cards;
 
 -(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary;
 

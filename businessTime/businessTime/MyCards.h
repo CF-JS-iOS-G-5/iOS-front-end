@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MyCards : NSObject
+
+@property(strong, nonatomic)NSString *userId;
 
 @end

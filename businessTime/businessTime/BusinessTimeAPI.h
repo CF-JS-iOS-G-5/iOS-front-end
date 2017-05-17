@@ -11,14 +11,14 @@
 #import "User.h"
 
 typedef void(^MeetupCompletion)(NSArray <Meetup *> *allMeetups);
-typedef void(^UUIDCompletion)(NSURLResponse *response);
+typedef void(^CardCompletion)(NSURLResponse *response);
 typedef void(^CloudKitCompletion)(User *user);
 
 @interface BusinessTimeAPI : NSObject
 
 +(void)fetchAllMeetupsForLanguage:(NSString *)language andZip:(NSString *)zip andCompletion:(MeetupCompletion)completion;
 
-+(void)postUUID:(NSString *)UUID andCompletion:(UUIDCompletion)completion;
++(void)postCard:(NSString *)card andCompletion:(CardCompletion)completion;
 
 +(void)postCloudKitID:(NSString *)cloudKitId andCompletion:(CloudKitCompletion)completion;
 

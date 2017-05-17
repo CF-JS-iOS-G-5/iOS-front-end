@@ -39,7 +39,7 @@
             NSLog(@"iCLOUD TOKEN: %@", recordID.description);
             NSLog(@"RECORD NAME: %@", recordID.recordName);
             //SEND TOKEN TO BACKEND HERE
-            
+            self.iToken = recordID.recordName;
         }
         
     }];

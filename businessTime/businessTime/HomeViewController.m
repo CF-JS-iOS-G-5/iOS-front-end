@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "AppDelegate.h"
 #import "CardCreatorViewController.h"
 #import <SafariServices/SafariServices.h>
 #import "BusinessTimeAPI.h"
@@ -19,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [BusinessTimeAPI postCloudKitID:@"Testid and response2" andCompletion:^(User *user) {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [BusinessTimeAPI postCloudKitID:appDelegate.iToken  andCompletion:^(User *user) {
         NSLog(@"User: %@", user);
     }];
     
