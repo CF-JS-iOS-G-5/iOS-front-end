@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "CardCreatorViewController.h"
 #import <SafariServices/SafariServices.h>
+#import "BusinessTimeAPI.h"
 
 @interface HomeViewController ()
 
@@ -19,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [BusinessTimeAPI postCloudKitID:@"Testid and response2" andCompletion:^(User *user) {
+        NSLog(@"reached homeview controller");
+    }];
 }
 - (IBAction)createCardButtonPressed:(id)sender {
     
