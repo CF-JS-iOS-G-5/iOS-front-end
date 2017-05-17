@@ -78,7 +78,7 @@ xcuserdata/
 # Carthage/Checkouts
 
 Carthage/Build
-Cartfile
+#Cartfile
 
 # Carthage - A simple, decentralized dependency manager for Cocoa
 Carthage/Checkouts/
