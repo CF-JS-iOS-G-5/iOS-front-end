@@ -21,8 +21,10 @@
     [super viewDidLoad];
     
     [BusinessTimeAPI postCloudKitID:@"Testid and response2" andCompletion:^(User *user) {
-        NSLog(@"reached homeview controller");
+        NSLog(@"User: %@", user);
     }];
+    
+    
 }
 - (IBAction)createCardButtonPressed:(id)sender {
     

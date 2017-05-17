@@ -11,13 +11,7 @@
 @interface User : NSObject
 
 @property(strong, nonatomic)NSNumber *userId;
-@property(strong, nonatomic)NSString *name;
-@property(strong, nonatomic)NSString *bio;
-@property(strong, nonatomic)NSNumber *latitude;
-@property(strong, nonatomic)NSNumber *longitude;
-@property(strong, nonatomic)NSString *city;
-@property(strong, nonatomic)NSString *state;
-@property(strong, nonatomic)NSString *countryName;
+@property(strong, nonatomic)NSString *iToken;
 
 -(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary;
 

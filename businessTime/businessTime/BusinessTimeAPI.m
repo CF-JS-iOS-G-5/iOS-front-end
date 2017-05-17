@@ -58,7 +58,7 @@
     
     NSLog(@"TOKEN DATA: %@", tokenData);
 
-    
+
     if (tokenSerializationError) {
         NSLog(@"Error serializing token: %@", tokenSerializationError.localizedDescription);
     }
@@ -77,7 +77,9 @@
         NSLog(@"%@", [[NSString alloc]initWithData:data encoding:kCFStringEncodingUTF8]);
         
         
-        NSString *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&readingUserError];
+        NSDictionary *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&readingUserError];
+        
+        User *user = [[User alloc]initWithDictionary:rootObject];
         
         NSLog(@"ROOT OBJECT: %@", rootObject);
         
@@ -90,13 +92,13 @@
         } else {
             NSLog(@"Success posting cloudkit id!");
         }
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                completion(user);
+            });
+        }
     }] resume];
-    if (completion) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            NSLog(@"Reached completion");
-        });
-    }
 }
 
 +(void)postUUID:(NSString *)UUID andCompletion:(UUIDCompletion)completion {
