@@ -267,9 +267,15 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxs-05-YJQ">
                                 <rect key="frame" x="69" y="174" width="51" height="31"/>
+                                <connections>
+                                    <action selector="javaScriptSwitch:" destination="NII-QR-fne" eventType="valueChanged" id="grv-nj-40B"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kt-GE-fd8">
                                 <rect key="frame" x="69" y="294" width="51" height="31"/>
+                                <connections>
+                                    <action selector="iOSSwitch:" destination="NII-QR-fne" eventType="valueChanged" id="x1L-b7-9vu"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9H-sQ-YIh">
                                 <rect key="frame" x="127.5" y="513" width="120" height="45"/>
@@ -281,9 +287,15 @@
                                 <state key="normal" title="Find Meetups">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="findMeetupsButtonPressed:" destination="NII-QR-fne" eventType="touchUpInside" id="RzH-wn-qkp"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m21-Fk-CjL">
                                 <rect key="frame" x="69" y="236" width="51" height="31"/>
+                                <connections>
+                                    <action selector="pythonSwitch:" destination="NII-QR-fne" eventType="valueChanged" id="jOP-tC-IpY"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -319,6 +331,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Find" id="XH6-aT-tl6"/>
                     <connections>
+                        <outlet property="zipCodeSearchBar" destination="veY-3O-ZAh" id="yIh-Ac-nsh"/>
                         <segue destination="g3l-Ti-unF" kind="presentation" identifier="MeetupDetailViewController" id="wmk-SD-Mpf"/>
                     </connections>
                 </viewController>
