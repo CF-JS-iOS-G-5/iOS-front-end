@@ -43,22 +43,60 @@
 
 +(void)postCloudKitID:(NSString *)cloudKitId andCompletion:(CloudKitCompletion)completion{
 
-    NSString *urlString = [NSString stringWithFormat:@"https://businesstime.herokuapp.com/api/user?id=%@", cloudKitId];
+    NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user"];
     
     NSURL *databaseURL = [NSURL URLWithString:urlString];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:databaseURL];
     request.HTTPMethod = @"POST";
     
+    NSDictionary *cloudKitToken = @{@"iToken": cloudKitId};
+    
+    NSError *tokenSerializationError;
+    
+    NSData *tokenData = [NSJSONSerialization dataWithJSONObject:cloudKitToken options:0 error:&tokenSerializationError];
+    
+    NSLog(@"TOKEN DATA: %@", tokenData);
+
+    
+    if (tokenSerializationError) {
+        NSLog(@"Error serializing token: %@", tokenSerializationError.localizedDescription);
+    }
+    
+    request.HTTPBody = tokenData;
+    
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
     
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSError *readingUserError;
+        
+        NSLog(@"RESPONSE: %@", response);
+        NSLog(@"%@", [[NSString alloc]initWithData:data encoding:kCFStringEncodingUTF8]);
+        
+        
+        NSString *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&readingUserError];
+        
+        NSLog(@"ROOT OBJECT: %@", rootObject);
+        
+        if (readingUserError) {
+            NSLog(@"Error reading user: %@", readingUserError.localizedDescription);
+        }
+        
         if (error) {
             NSLog(@"Error sending cloudkit id: %@", error.localizedDescription);
         } else {
             NSLog(@"Success posting cloudkit id!");
         }
     }] resume];
+    if (completion) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"Reached completion");
+        });
+    }
 }
 
 +(void)postUUID:(NSString *)UUID andCompletion:(UUIDCompletion)completion {

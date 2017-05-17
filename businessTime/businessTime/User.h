@@ -19,5 +19,6 @@
 @property(strong, nonatomic)NSString *state;
 @property(strong, nonatomic)NSString *countryName;
 
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end

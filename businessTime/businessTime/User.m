@@ -10,18 +10,18 @@
 
 @implementation User
 
-+(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
     self = [super init];
     
     if (self) {
         _userId = jsonDictionary[@"userId"];
-        _name = jsonDictionary[@"userId"];
-        _bio = jsonDictionary[@"userId"];
-        _latitude = jsonDictionary[@"userId"];
-        _longitude = jsonDictionary[@"userId"];
-        _city = jsonDictionary[@"userId"];
-        _state = jsonDictionary[@"userId"];
-        _countryName = jsonDictionary[@"userId"];
+        _name = jsonDictionary[@"name"];
+        _bio = jsonDictionary[@"bio"];
+        _latitude = jsonDictionary[@"lat"];
+        _longitude = jsonDictionary[@"lon"];
+        _city = jsonDictionary[@"city"];
+        _state = jsonDictionary[@"state"];
+        _countryName = jsonDictionary[@"localized_country_name"];
 
     }
     return self;

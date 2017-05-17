@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [BusinessTimeAPI postCloudKitID:@"Testid" andCompletion:^(User *user) {
+    [BusinessTimeAPI postCloudKitID:@"Testid and response2" andCompletion:^(User *user) {
         NSLog(@"reached homeview controller");
     }];
 }
