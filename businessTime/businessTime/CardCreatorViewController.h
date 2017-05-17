@@ -10,4 +10,8 @@
 
 @interface CardCreatorViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (weak, nonatomic) IBOutlet UIView *cardUserImageView;
+
+
 @end

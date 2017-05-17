@@ -35,6 +35,9 @@
                                 <state key="normal" title="CREATE A CARD">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createCardButtonPressed:" destination="hqP-nI-4sL" eventType="touchUpInside" id="SAm-53-7wr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vG-uk-jd2">
                                 <rect key="frame" x="132" y="316" width="111" height="39"/>
@@ -43,6 +46,9 @@
                                 <state key="normal" title="MY CARDS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="myCardsButtonPressed:" destination="hqP-nI-4sL" eventType="touchUpInside" id="NRz-m7-Y1V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,10 +62,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="HWZ-qd-Mav"/>
+                    <connections>
+                        <segue destination="tw3-Aq-YQA" kind="show" identifier="cardCreatorSegue" id="1YP-m3-ETc"/>
+                        <segue destination="E8w-42-we5" kind="show" identifier="myCardsSegue" id="ecK-6z-6sn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aQ-Yk-tdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="107.49625187406298"/>
+            <point key="canvasLocation" x="1873" y="879"/>
         </scene>
         <!--Create-->
         <scene sceneID="iBW-qg-2Tl">
@@ -81,18 +91,27 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fullNameTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="Ovh-oq-NuV"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skills" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZN-3Y-FQF">
                                         <rect key="frame" x="8" y="107" width="274" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="skillsTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="tm3-w3-Ymp"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
                                         <rect key="frame" x="8" y="153" width="132" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="phoneNumberTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="tkh-PA-gCp"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fws-wr-5G0">
                                         <rect key="frame" x="166" y="153" width="144" height="30"/>
@@ -102,12 +121,18 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="c8i-o5-qOc"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social Media" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-6Z-2PJ">
                                         <rect key="frame" x="8" y="191" width="313" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="socialMediaTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="34z-t5-sF8"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-Ed-Wd8">
                                         <rect key="frame" x="157" y="8" width="194" height="91"/>
@@ -120,6 +145,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="companyNameTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="tUm-zx-tvj"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42079890889999999" green="0.38911351869999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,11 +176,17 @@
                                 <rect key="frame" x="146" y="441" width="83" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save Card"/>
+                                <connections>
+                                    <action selector="saveCardButtonPressed:" destination="tw3-Aq-YQA" eventType="touchUpInside" id="QtR-tT-mPF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-z5-UCy">
                                 <rect key="frame" x="130.5" y="333" width="114" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Update Card"/>
+                                <connections>
+                                    <action selector="updateCardButtonPressed:" destination="tw3-Aq-YQA" eventType="touchUpInside" id="0wi-P6-FBP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,10 +203,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create" id="a8Z-tp-MuJ"/>
+                    <connections>
+                        <outlet property="cardUserImageView" destination="lzI-N9-PzZ" id="vuY-Mg-uhn"/>
+                        <outlet property="cardView" destination="lzI-N9-PzZ" id="knI-L3-kCy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0h-kR-sQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2745" y="107"/>
+            <point key="canvasLocation" x="1873" y="107"/>
         </scene>
         <!--Find-->
         <scene sceneID="xd6-Dc-oLA">
@@ -286,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChX-qY-bfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3601" y="107"/>
+            <point key="canvasLocation" x="1873" y="-606"/>
         </scene>
         <!--My Cards-->
         <scene sceneID="sGF-Ic-Y4C">
@@ -301,7 +339,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yXh-CS-0un">
-                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="582"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mib-cb-R71">
                                     <size key="itemSize" width="287" height="175"/>
@@ -324,17 +362,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yXh-CS-0un" firstAttribute="top" secondItem="CRB-je-WKT" secondAttribute="bottom" constant="8" id="PpL-Wz-BMs"/>
-                            <constraint firstItem="yXh-CS-0un" firstAttribute="leading" secondItem="eek-tc-7Nt" secondAttribute="leading" id="a7o-gq-LTs"/>
-                            <constraint firstAttribute="trailing" secondItem="yXh-CS-0un" secondAttribute="trailing" id="ftY-al-myC"/>
-                            <constraint firstItem="hlf-SZ-sW9" firstAttribute="top" secondItem="yXh-CS-0un" secondAttribute="bottom" id="oXM-4t-eUK"/>
+                            <constraint firstItem="yXh-CS-0un" firstAttribute="leading" secondItem="eek-tc-7Nt" secondAttribute="leading" id="2Qa-97-AGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="yXh-CS-0un" secondAttribute="trailing" id="DZY-ew-9Rg"/>
+                            <constraint firstItem="hlf-SZ-sW9" firstAttribute="top" secondItem="yXh-CS-0un" secondAttribute="bottom" constant="8" id="aYt-mp-HHr"/>
+                            <constraint firstItem="yXh-CS-0un" firstAttribute="top" secondItem="CRB-je-WKT" secondAttribute="bottom" constant="8" id="fhC-D6-fho"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Cards" id="qZz-tV-b3a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TE-yS-cvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4469.6000000000004" y="106.59670164917542"/>
+            <point key="canvasLocation" x="1873" y="1692"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wkF-fu-kaF">
@@ -394,7 +432,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lca-ex-OPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3601" y="841"/>
+            <point key="canvasLocation" x="2774" y="-607"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1YP-m3-ETc"/>
+        <segue reference="ecK-6z-6sn"/>
+    </inferredMetricsTieBreakers>
 </document>
