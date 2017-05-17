@@ -10,4 +10,9 @@
 
 @interface Meetup : NSObject
 
+@property(strong,nonatomic)NSString *eventName;
+@property(strong,nonatomic)NSString *eventDate;
+@property(strong,nonatomic)NSString *eventDescription;
+@property(strong, nonatomic)NSString *zip;
+
 @end

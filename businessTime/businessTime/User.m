@@ -10,4 +10,21 @@
 
 @implementation User
 
++(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
+    self = [super init];
+    
+    if (self) {
+        _userId = jsonDictionary[@"userId"];
+        _name = jsonDictionary[@"userId"];
+        _bio = jsonDictionary[@"userId"];
+        _latitude = jsonDictionary[@"userId"];
+        _longitude = jsonDictionary[@"userId"];
+        _city = jsonDictionary[@"userId"];
+        _state = jsonDictionary[@"userId"];
+        _countryName = jsonDictionary[@"userId"];
+
+    }
+    return self;
+}
+
 @end

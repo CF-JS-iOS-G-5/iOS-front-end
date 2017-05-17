@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeetupDetailViewController : UIViewController
+@interface MeetupDetailViewController : UIViewController 
+
+
 
 @end

@@ -10,4 +10,15 @@
 
 @implementation Meetup
 
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
+    
+    self = [super init];
+    
+    if (self) {
+        _eventName = jsonDictionary[@"name"];
+        _eventDescription = jsonDictionary[@""];
+    }
+    return self;
+}
+
 @end
