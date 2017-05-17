@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="f9m-Le-ovS">
             <objects>
                 <viewController id="hqP-nI-4sL" customClass="HomeViewController" sceneMemberID="viewController">
@@ -55,16 +55,17 @@
                             <constraint firstItem="3vG-uk-jd2" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" id="gyD-1G-3x0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HWZ-qd-Mav"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="HWZ-qd-Mav"/>
                     <connections>
                         <segue destination="tw3-Aq-YQA" kind="show" identifier="CardCreatorViewController" id="zWZ-Bh-1lI"/>
+                        <segue destination="E8w-42-we5" kind="show" identifier="MyCardsViewController" id="rl4-2t-22v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aQ-Yk-tdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1936.8" y="107.49625187406298"/>
         </scene>
-        <!--Item-->
+        <!--Create-->
         <scene sceneID="iBW-qg-2Tl">
             <objects>
                 <viewController id="tw3-Aq-YQA" customClass="CardCreatorViewController" sceneMemberID="viewController">
@@ -171,7 +172,7 @@
                             <constraint firstItem="lzI-N9-PzZ" firstAttribute="leading" secondItem="DDZ-MY-hfx" secondAttribute="leading" constant="8" id="qvY-vj-27f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="a8Z-tp-MuJ"/>
+                    <tabBarItem key="tabBarItem" title="Create" id="a8Z-tp-MuJ"/>
                     <connections>
                         <segue destination="NII-QR-fne" kind="show" identifier="MeetupViewController" id="Dvn-o9-xef"/>
                     </connections>
@@ -180,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="2776.8000000000002" y="107.49625187406298"/>
         </scene>
-        <!--Item-->
+        <!--Meetup-->
         <scene sceneID="xd6-Dc-oLA">
             <objects>
                 <viewController id="NII-QR-fne" customClass="MeetupViewController" sceneMemberID="viewController">
@@ -239,12 +240,24 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kt-GE-fd8">
                                 <rect key="frame" x="69" y="294" width="51" height="31"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9H-sQ-YIh">
+                                <rect key="frame" x="127.5" y="513" width="120" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="aQy-HV-hO5"/>
+                                    <constraint firstAttribute="width" constant="120" id="sV7-AF-dNW"/>
+                                </constraints>
+                                <state key="normal" title="Find Meetups">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m21-Fk-CjL">
                                 <rect key="frame" x="69" y="236" width="51" height="31"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="b9H-sQ-YIh" firstAttribute="centerX" secondItem="Qvc-0p-R2M" secondAttribute="centerX" id="3Tu-Ng-D58"/>
                             <constraint firstItem="XTI-wk-NAW" firstAttribute="top" secondItem="bTk-Le-u2g" secondAttribute="bottom" constant="159" id="6JI-38-GRM"/>
                             <constraint firstItem="8Kt-GE-fd8" firstAttribute="leading" secondItem="Qvc-0p-R2M" secondAttribute="leadingMargin" constant="53" id="6Ln-1v-FdL"/>
                             <constraint firstItem="veY-3O-ZAh" firstAttribute="top" secondItem="32B-GZ-4TF" secondAttribute="bottom" constant="21" id="AJn-KS-bOk"/>
@@ -255,6 +268,7 @@
                             <constraint firstItem="IVn-jo-PM3" firstAttribute="top" secondItem="5tM-2T-uof" secondAttribute="bottom" constant="38" id="Leg-V9-Lxy"/>
                             <constraint firstItem="5tM-2T-uof" firstAttribute="top" secondItem="XTI-wk-NAW" secondAttribute="bottom" constant="41" id="MYj-4z-FNd"/>
                             <constraint firstItem="XTI-wk-NAW" firstAttribute="centerX" secondItem="Qvc-0p-R2M" secondAttribute="centerX" constant="-3" id="UDv-cd-mYJ"/>
+                            <constraint firstItem="Bez-Nr-hGs" firstAttribute="top" secondItem="b9H-sQ-YIh" secondAttribute="bottom" constant="60" id="Ui1-wY-CgM"/>
                             <constraint firstItem="IVn-jo-PM3" firstAttribute="centerY" secondItem="8Kt-GE-fd8" secondAttribute="centerY" id="VWF-OY-aRq"/>
                             <constraint firstAttribute="trailing" secondItem="32B-GZ-4TF" secondAttribute="trailing" constant="150" id="Xdh-i4-xKh"/>
                             <constraint firstItem="t45-ZB-x40" firstAttribute="top" secondItem="IVn-jo-PM3" secondAttribute="bottom" constant="-2" id="Z20-Tr-YaB"/>
@@ -272,11 +286,61 @@
                             <constraint firstItem="t45-ZB-x40" firstAttribute="centerX" secondItem="Qvc-0p-R2M" secondAttribute="centerX" id="zvS-PM-xdh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="XH6-aT-tl6"/>
+                    <tabBarItem key="tabBarItem" title="Meetup" id="XH6-aT-tl6"/>
+                    <connections>
+                        <segue destination="g3l-Ti-unF" kind="presentation" identifier="MeetupDetailViewController" id="wmk-SD-Mpf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChX-qY-bfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3600.8000000000002" y="99.400299850074973"/>
+        </scene>
+        <!--My Cards-->
+        <scene sceneID="sGF-Ic-Y4C">
+            <objects>
+                <viewController id="E8w-42-we5" customClass="MyCardsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CRB-je-WKT"/>
+                        <viewControllerLayoutGuide type="bottom" id="hlf-SZ-sW9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eek-tc-7Nt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yXh-CS-0un">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mib-cb-R71">
+                                    <size key="itemSize" width="161" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="4bL-tC-fAs">
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="161" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yXh-CS-0un" firstAttribute="top" secondItem="CRB-je-WKT" secondAttribute="bottom" constant="8" id="PpL-Wz-BMs"/>
+                            <constraint firstItem="yXh-CS-0un" firstAttribute="leading" secondItem="eek-tc-7Nt" secondAttribute="leading" id="a7o-gq-LTs"/>
+                            <constraint firstAttribute="trailing" secondItem="yXh-CS-0un" secondAttribute="trailing" id="ftY-al-myC"/>
+                            <constraint firstItem="hlf-SZ-sW9" firstAttribute="top" secondItem="yXh-CS-0un" secondAttribute="bottom" id="oXM-4t-eUK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Cards" id="qZz-tV-b3a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TE-yS-cvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4400.8000000000002" y="106.59670164917542"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wkF-fu-kaF">
@@ -295,10 +359,10 @@
             </objects>
             <point key="canvasLocation" x="997.60000000000002" y="107.49625187406298"/>
         </scene>
-        <!--View Controller-->
+        <!--Meetup Detail View Controller-->
         <scene sceneID="5fe-au-H5u">
             <objects>
-                <viewController id="g3l-Ti-unF" sceneMemberID="viewController">
+                <viewController id="g3l-Ti-unF" customClass="MeetupDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sdR-9g-nFX"/>
                         <viewControllerLayoutGuide type="bottom" id="yH2-VB-eJJ"/>
@@ -306,12 +370,34 @@
                     <view key="view" contentMode="scaleToFill" id="XZK-lJ-ZbC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6TW-To-T0y">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="TZb-PB-zfF">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TZb-PB-zfF" id="N6q-h5-V2i">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6TW-To-T0y" firstAttribute="top" secondItem="sdR-9g-nFX" secondAttribute="bottom" constant="8" id="8ev-Xf-ihz"/>
+                            <constraint firstItem="6TW-To-T0y" firstAttribute="leading" secondItem="XZK-lJ-ZbC" secondAttribute="leading" id="GYo-RB-buz"/>
+                            <constraint firstItem="yH2-VB-eJJ" firstAttribute="top" secondItem="6TW-To-T0y" secondAttribute="bottom" id="j4d-LD-Lcg"/>
+                            <constraint firstAttribute="trailing" secondItem="6TW-To-T0y" secondAttribute="trailing" id="tlF-tr-nc3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lca-ex-OPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4369" y="99"/>
+            <point key="canvasLocation" x="3601" y="841"/>
         </scene>
     </scenes>
 </document>
