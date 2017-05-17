@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.h
+//  MeetupDetailViewController.h
 //  businessTime
 //
 //  Created by Eve Denison on 5/16/17.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WelcomeViewController : UIViewController
+@interface MeetupDetailViewController : UIViewController
 
 @end

@@ -7,11 +7,10 @@
 //
 
 #import "HomeViewController.h"
-#import "AuthManager.h"
-#import "MeetupToken.h"
+#import "CardCreatorViewController.h"
 #import <SafariServices/SafariServices.h>
 
-@interface HomeViewController () 
+@interface HomeViewController ()
 
 @end
 
@@ -21,7 +20,17 @@
     [super viewDidLoad];
     
 }
+- (IBAction)createCardButtonPressed:(id)sender {
+    
+//    CardCreatorViewController *cardCreatorViewController = [[CardCreatorViewController alloc] init];
+    [self.tabBarController setSelectedIndex:1];
+    
+}
 
+- (IBAction)myCardsButtonPressed:(id)sender {
+    
+    [self.tabBarController setSelectedIndex:3];
+}
 
 
 @end

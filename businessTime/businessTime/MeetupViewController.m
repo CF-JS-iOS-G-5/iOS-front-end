@@ -35,5 +35,15 @@
     [self presentViewController:svc animated:YES completion:nil];
     
 }
+- (IBAction)javaScriptSwitch:(id)sender {
+}
+
+- (IBAction)pythonSwitch:(id)sender {
+}
+
+- (IBAction)iOSSwitch:(id)sender {
+}
+- (IBAction)findMeetupsButtonPressed:(id)sender {
+}
 
 @end

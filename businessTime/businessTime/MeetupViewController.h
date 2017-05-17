@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MeetupViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISearchBar *zipCodeSearchBar;
 
 @end

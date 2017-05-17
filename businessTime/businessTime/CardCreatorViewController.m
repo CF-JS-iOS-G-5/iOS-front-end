@@ -19,19 +19,53 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma MARK Image Snapshot
+
+//- (UIImage *)snapshot {
+//    UIGraphicsBeginImageContextWithOptions(self.cardView.bounds.size, YES, 0);
+//    [self.cardView drawViewHierarchyInRect:self.cardView.bounds afterScreenUpdates:YES];
+//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    return image;
+//}
+
+- (UIImage *)snapshot {
+    UIGraphicsBeginImageContextWithOptions(self.cardView.bounds.size, NO, [UIScreen mainScreen].scale);
+    
+    [self.cardView drawViewHierarchyInRect:self.cardView.bounds afterScreenUpdates:YES];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    return image;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)fullNameTextField:(id)sender {
 }
-*/
+
+- (IBAction)companyNameTextField:(id)sender {
+}
+
+- (IBAction)skillsTextField:(id)sender {
+}
+
+- (IBAction)phoneNumberTextField:(id)sender {
+}
+
+- (IBAction)emailTextField:(id)sender {
+}
+
+- (IBAction)socialMediaTextField:(id)sender {
+}
+
+- (IBAction)updateCardButtonPressed:(id)sender {
+}
+
+- (IBAction)saveCardButtonPressed:(id)sender {
+    
+    [self snapshot];
+}
+
 
 @end

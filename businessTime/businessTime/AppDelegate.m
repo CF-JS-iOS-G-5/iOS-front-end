@@ -36,11 +36,14 @@
         if (error) {
             NSLog(@"Error fetching iCloud token: %@", error.localizedDescription);
         } else {
-           NSLog(@"iCLOUD TOKEN: %@", recordID.description);
+            NSLog(@"iCLOUD TOKEN: %@", recordID.description);
+            NSLog(@"RECORD NAME: %@", recordID.recordName);
+            //SEND TOKEN TO BACKEND HERE
+            
         }
-       
+        
     }];
-
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
