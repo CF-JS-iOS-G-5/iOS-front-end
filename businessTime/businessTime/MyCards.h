@@ -19,8 +19,6 @@
 @property(strong, nonatomic)NSString *skills;
 @property(strong, nonatomic)NSString *phoneNumber;
 @property(strong, nonatomic)NSString *email;
-@property(strong, nonatomic)NSString *socialMedia;
-
 
 
 -(instancetype)initWithUserId:(NSString *)userId andCardJPG:(NSString *)cardJPG;
