@@ -22,29 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Business Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPo-M4-3GH">
-                                <rect key="frame" x="67.5" y="139" width="206" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="businessTimeHome" translatesAutoresizingMaskIntoConstraints="NO" id="LeS-fH-0uq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="629"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPo-M4-3GH">
+                                <rect key="frame" x="10" y="124" width="355" height="63.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="55"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="1" blue="1" alpha="0.52405286815068497" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaN-aO-bvX">
-                                <rect key="frame" x="109" y="181" width="157" height="38"/>
-                                <color key="backgroundColor" red="0.17539438579355549" green="0.063950436017711831" blue="0.64623651649746194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="109" y="272" width="157" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.55923587328767121" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="CREATE A CARD">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="createCardButtonPressed:" destination="hqP-nI-4sL" eventType="touchUpInside" id="SAm-53-7wr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vG-uk-jd2">
-                                <rect key="frame" x="132" y="316" width="111" height="39"/>
-                                <color key="backgroundColor" red="0.17539438579355549" green="0.063950436017711831" blue="0.64623651649746194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="132" y="385" width="111" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.42719927226027399" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="MY CARDS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="myCardsButtonPressed:" destination="hqP-nI-4sL" eventType="touchUpInside" id="NRz-m7-Y1V"/>
@@ -53,23 +62,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="QaN-aO-bvX" secondAttribute="bottom" constant="399" id="3rg-91-NNb"/>
-                            <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="3vG-uk-jd2" secondAttribute="bottom" constant="263" id="8HM-PZ-S71"/>
-                            <constraint firstItem="TPo-M4-3GH" firstAttribute="centerY" secondItem="x5t-cq-EcS" secondAttribute="centerY" constant="-184" id="ISd-3S-SW8"/>
-                            <constraint firstItem="TPo-M4-3GH" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" constant="-17" id="Y4D-rx-41H"/>
+                            <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="QaN-aO-bvX" secondAttribute="bottom" constant="308" id="3rg-91-NNb"/>
+                            <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="3vG-uk-jd2" secondAttribute="bottom" constant="194" id="8HM-PZ-S71"/>
+                            <constraint firstAttribute="trailing" secondItem="LeS-fH-0uq" secondAttribute="trailing" id="8OB-co-F8p"/>
+                            <constraint firstItem="TPo-M4-3GH" firstAttribute="centerY" secondItem="x5t-cq-EcS" secondAttribute="centerY" constant="-178" id="ISd-3S-SW8"/>
+                            <constraint firstItem="LeS-fH-0uq" firstAttribute="top" secondItem="ims-Tg-sIb" secondAttribute="bottom" constant="-20" id="LY2-ja-RXH"/>
+                            <constraint firstItem="LeS-fH-0uq" firstAttribute="leading" secondItem="x5t-cq-EcS" secondAttribute="leading" id="NPQ-wQ-RUD"/>
+                            <constraint firstItem="TPo-M4-3GH" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" constant="-0.5" id="Y4D-rx-41H"/>
                             <constraint firstItem="QaN-aO-bvX" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" id="elm-dO-8vr"/>
                             <constraint firstItem="3vG-uk-jd2" firstAttribute="centerX" secondItem="x5t-cq-EcS" secondAttribute="centerX" id="gyD-1G-3x0"/>
+                            <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="LeS-fH-0uq" secondAttribute="bottom" constant="-11" id="tmC-Zc-Z2q"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="HWZ-qd-Mav"/>
                     <connections>
+                        <outlet property="createCardButton" destination="QaN-aO-bvX" id="Udt-1f-3JN"/>
+                        <outlet property="myCardsButton" destination="3vG-uk-jd2" id="rji-AB-Uew"/>
                         <segue destination="tw3-Aq-YQA" kind="show" identifier="cardCreatorSegue" id="1YP-m3-ETc"/>
                         <segue destination="E8w-42-we5" kind="show" identifier="myCardsSegue" id="ecK-6z-6sn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aQ-Yk-tdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="879"/>
+            <point key="canvasLocation" x="1872.8" y="878.41079460269873"/>
         </scene>
         <!--Create-->
         <scene sceneID="iBW-qg-2Tl">
@@ -98,7 +113,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
                                         <rect key="frame" x="8" y="153" width="132" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -130,6 +145,7 @@
                                 <constraints>
                                     <constraint firstItem="d6j-Ii-Nh9" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="top" constant="8" id="25P-yz-5QW"/>
                                     <constraint firstItem="Fws-wr-5G0" firstAttribute="top" secondItem="MZN-3Y-FQF" secondAttribute="bottom" constant="16" id="5TK-jk-tuD"/>
+                                    <constraint firstItem="EFX-fP-zd2" firstAttribute="baseline" secondItem="Fws-wr-5G0" secondAttribute="baseline" id="FXl-bd-60b"/>
                                     <constraint firstItem="MZN-3Y-FQF" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="8" id="GbN-uI-ElT"/>
                                     <constraint firstAttribute="trailing" secondItem="Fws-wr-5G0" secondAttribute="trailing" constant="49" id="J0a-qJ-BTp"/>
                                     <constraint firstItem="d6j-Ii-Nh9" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="8" id="PJF-KV-UKg"/>
@@ -152,14 +168,6 @@
                                     <action selector="saveCardButtonPressed:" destination="tw3-Aq-YQA" eventType="touchUpInside" id="QtR-tT-mPF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-z5-UCy">
-                                <rect key="frame" x="130.5" y="333" width="114" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Update Card"/>
-                                <connections>
-                                    <action selector="updateCardButtonPressed:" destination="tw3-Aq-YQA" eventType="touchUpInside" id="0wi-P6-FBP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -168,8 +176,6 @@
                             <constraint firstItem="gRa-xX-G4N" firstAttribute="centerX" secondItem="DDZ-MY-hfx" secondAttribute="centerX" id="KNX-Ze-rb6"/>
                             <constraint firstItem="gpi-DX-Pm0" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="bottom" constant="341" id="Xbc-Sz-8jn"/>
                             <constraint firstItem="lzI-N9-PzZ" firstAttribute="centerX" secondItem="DDZ-MY-hfx" secondAttribute="centerX" id="awJ-jB-w1k"/>
-                            <constraint firstItem="HGe-z5-UCy" firstAttribute="centerX" secondItem="DDZ-MY-hfx" secondAttribute="centerX" id="cLk-kI-o7r"/>
-                            <constraint firstItem="gpi-DX-Pm0" firstAttribute="top" secondItem="HGe-z5-UCy" secondAttribute="bottom" constant="249" id="dU7-5m-WAx"/>
                             <constraint firstAttribute="trailing" secondItem="lzI-N9-PzZ" secondAttribute="trailing" constant="8" id="qMS-15-fD8"/>
                             <constraint firstItem="lzI-N9-PzZ" firstAttribute="leading" secondItem="DDZ-MY-hfx" secondAttribute="leading" constant="8" id="qvY-vj-27f"/>
                         </constraints>
@@ -467,8 +473,11 @@
             <point key="canvasLocation" x="2773.5999999999999" y="-607.64617691154433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="businessTimeHome" width="993" height="1247"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FuH-LD-WQe"/>
-        <segue reference="h19-wq-Dge"/>
+        <segue reference="1YP-m3-ETc"/>
+        <segue reference="ecK-6z-6sn"/>
     </inferredMetricsTieBreakers>
 </document>
