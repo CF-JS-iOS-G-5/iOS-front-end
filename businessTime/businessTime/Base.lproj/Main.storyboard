@@ -91,27 +91,18 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="fullNameTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="Ovh-oq-NuV"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skills" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZN-3Y-FQF">
                                         <rect key="frame" x="8" y="107" width="274" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="skillsTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="tm3-w3-Ymp"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
                                         <rect key="frame" x="8" y="153" width="132" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="phoneNumberTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="tkh-PA-gCp"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fws-wr-5G0">
                                         <rect key="frame" x="166" y="153" width="144" height="30"/>
@@ -121,18 +112,12 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="emailTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="c8i-o5-qOc"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social Media" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-6Z-2PJ">
                                         <rect key="frame" x="8" y="191" width="313" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="socialMediaTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="34z-t5-sF8"/>
-                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-Ed-Wd8">
                                         <rect key="frame" x="157" y="8" width="194" height="91"/>
@@ -145,9 +130,6 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="companyNameTextField:" destination="tw3-Aq-YQA" eventType="editingDidEnd" id="tUm-zx-tvj"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42079890889999999" green="0.38911351869999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,6 +188,12 @@
                     <connections>
                         <outlet property="cardUserImageView" destination="lzI-N9-PzZ" id="vuY-Mg-uhn"/>
                         <outlet property="cardView" destination="lzI-N9-PzZ" id="knI-L3-kCy"/>
+                        <outlet property="companyNameTextField" destination="7MZ-6e-jlI" id="ZQ6-xJ-b2E"/>
+                        <outlet property="emailTextField" destination="Fws-wr-5G0" id="ecE-Hx-Bvb"/>
+                        <outlet property="fullNameTextField" destination="d6j-Ii-Nh9" id="BNS-Pf-gkg"/>
+                        <outlet property="phoneNumberTextField" destination="EFX-fP-zd2" id="gby-Kk-JZR"/>
+                        <outlet property="skillsTextField" destination="MZN-3Y-FQF" id="4av-tY-X8M"/>
+                        <outlet property="socialMediaTextField" destination="HkY-6Z-2PJ" id="ZQG-4G-CZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0h-kR-sQM" userLabel="First Responder" sceneMemberID="firstResponder"/>

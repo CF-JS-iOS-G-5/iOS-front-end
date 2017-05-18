@@ -11,7 +11,7 @@
 
 @interface User : NSObject
 
-@property(strong, nonatomic)NSNumber *userId;
+@property(strong, nonatomic)NSString *userId;
 @property(strong, nonatomic)NSString *iToken;
 @property(strong, nonatomic)NSArray<UIImage *> *cards;
 
