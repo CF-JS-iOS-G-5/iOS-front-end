@@ -12,5 +12,6 @@
 @interface MyCards : NSObject
 
 @property(strong, nonatomic)NSString *userId;
+@property(strong, nonatomic)NSData *cardJPG;
 
 @end

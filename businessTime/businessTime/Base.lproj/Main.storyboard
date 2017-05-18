@@ -361,7 +361,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="4bL-tC-fAs">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4bL-tC-fAs">
                                         <rect key="frame" x="44" y="0.0" width="287" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -388,6 +388,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Cards" id="qZz-tV-b3a"/>
+                    <connections>
+                        <outlet property="collectionView" destination="yXh-CS-0un" id="Tl1-G9-m5C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TE-yS-cvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

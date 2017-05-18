@@ -7,8 +7,12 @@
 //
 
 #import "MyCardsViewController.h"
+#import "MyCards.h"
 
-@interface MyCardsViewController ()
+@interface MyCardsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property(strong, nonatomic)NSArray *allCards;
 
 @end
 
@@ -16,22 +20,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.collectionView.delegate = self;
+    
+    //PASS IMAGES HERE
+    [self.collectionView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.allCards.count;
 }
 
-/*
-#pragma mark - Navigation
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIndentifier = @"cell";
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIndentifier forIndexPath:indexPath];
+    
+    NSString *cardImage = [self.allCards objectAtIndex:indexPath.row];
+    
+    
+    //POPULATE CELL WITH IMAGES HERE
+    return cell;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSString *selected = [self.allCards objectAtIndex:indexPath.row];
+    NSLog(@"SElECTED CELL: %@", selected);
+}
 
 @end
