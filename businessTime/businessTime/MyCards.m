@@ -20,5 +20,14 @@
     return self;
 }
 
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
+    self = [super init];
+    
+    if (self) {
+        _userId = jsonDictionary[@"_id"];
+        _cardJPG = jsonDictionary[@"picData"];
+    }
+    return self;
+}
 
 @end

@@ -158,19 +158,29 @@
     
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSError *getCardError;
-        
-        NSString *decodedData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-
-        
+                
         NSArray *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&getCardError];
         
-        NSLog(@"GET CARD ROOT OBJECT: %@", rootObject);
+        NSMutableArray *cards = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *userCard in rootObject) {
+            MyCards *card = [[MyCards alloc]initWithDictionary:userCard];
+//            NSLog(@"CONVERTED CARD ID: %@", card.userId);
+            [cards addObject:card];
+            NSLog(@"CARDS.COUNT: %lu", (unsigned long)cards.count);
+        }
         
         if (error) {
             NSLog(@"%@", error);
         } else {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
             NSLog(@"%@", httpResponse);
+        }
+        
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(cards);
+            });
         }
     }] resume];
 }

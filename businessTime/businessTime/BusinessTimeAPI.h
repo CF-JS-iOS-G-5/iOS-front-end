@@ -14,7 +14,7 @@
 typedef void(^MeetupCompletion)(NSArray <Meetup *> *allMeetups);
 typedef void(^CardCompletion)(NSURLResponse *response);
 typedef void(^CloudKitCompletion)(User *user);
-typedef void(^GetCardsCompletion)(MyCards *cards);
+typedef void(^GetCardsCompletion)(NSArray<MyCards *> *cards);
 
 @interface BusinessTimeAPI : NSObject
 
