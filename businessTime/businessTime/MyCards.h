@@ -23,6 +23,6 @@
 
 
 
--(instancetype)initWithUserId:(NSString *)userId andCardJPG:(NSData *)cardJPG;
+-(instancetype)initWithUserId:(NSString *)userId andCardJPG:(NSString *)cardJPG;
 
 @end

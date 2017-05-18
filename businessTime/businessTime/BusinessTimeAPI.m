@@ -106,15 +106,15 @@
 
 +(void)postCard:(MyCards *)card andCompletion:(CardCompletion)completion {
 
-    NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user"];
+    NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user/%@/card", [[NSUserDefaults standardUserDefaults] objectForKey:@"kUserId"]];
     
     NSURL *databaseURL = [NSURL URLWithString:urlString];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:databaseURL];
     request.HTTPMethod = @"POST";
     
-    NSDictionary *cardDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:card.userId, @"userId",  card.cardJPG, @"cardJPG", nil];
-    
+    NSDictionary *cardDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:card.userId, @"userId",  card.cardJPG, @"picData", nil];
+    NSLog(@"%@", cardDictionary);
     NSData *cardData = [NSJSONSerialization dataWithJSONObject:cardDictionary options:0 error:nil];
     
     request.HTTPBody = cardData;
@@ -131,6 +131,8 @@
             NSLog(@"Success posting card!");
             NSLog(@"Response: %@ ", response);
         }
+        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"STR: %@", str);
         if (completion) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 

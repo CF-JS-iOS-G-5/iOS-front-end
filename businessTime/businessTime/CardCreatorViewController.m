@@ -39,14 +39,20 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    NSData *imageData = UIImageJPEGRepresentation(image, 1);
-    
+    NSData *imageData = UIImagePNGRepresentation(image);
+
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-    NSString *dataString = [[NSString alloc]initWithData:imageData encoding:NSUTF8StringEncoding];
+    NSString *dataString = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
     return dataString;
 }
-
-
+// Convert NSString -> NSData -> UIImage
+- (UIImage *)getImageFromString:(NSString *)dataString {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:dataString
+                                                      options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    UIImage *img = [UIImage imageWithData:data];
+    return img;
+}
 
 
 
