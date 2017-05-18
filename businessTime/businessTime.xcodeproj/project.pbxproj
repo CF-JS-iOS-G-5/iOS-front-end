@@ -154,8 +154,6 @@
 				50ADCCB41ECA4CB100AA37F3 /* CardCreatorViewController.m */,
 				50ADCCB61ECA4CC000AA37F3 /* MyCardsViewController.h */,
 				50ADCCB71ECA4CC000AA37F3 /* MyCardsViewController.m */,
-				50ADCCB91ECA4CD000AA37F3 /* UserViewController.h */,
-				50ADCCBA1ECA4CD000AA37F3 /* UserViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -172,8 +170,6 @@
 		7F2100721ECA2E4D0034A100 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				50ADCCAA1ECA49FF00AA37F3 /* CardCreator.h */,
-				50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */,
 				7F2100591ECA2DD80034A100 /* AppDelegate.h */,
 				7F21005A1ECA2DD80034A100 /* AppDelegate.m */,
 				7F2100731ECA2EAD0034A100 /* User.h */,
@@ -198,6 +194,10 @@
 		7F8404391ECE00BB00843505 /* Files we don't need right now */ = {
 			isa = PBXGroup;
 			children = (
+				50ADCCAA1ECA49FF00AA37F3 /* CardCreator.h */,
+				50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */,
+				50ADCCB91ECA4CD000AA37F3 /* UserViewController.h */,
+				50ADCCBA1ECA4CD000AA37F3 /* UserViewController.m */,
 				50ADCCC41ECA750500AA37F3 /* AuthManager.h */,
 				50ADCCC51ECA750500AA37F3 /* AuthManager.m */,
 				50ADCCB01ECA4A3400AA37F3 /* Meetup.h */,
