@@ -36,7 +36,7 @@
 
 - (IBAction)myCardsButtonPressed:(id)sender {
     
-    [self.tabBarController setSelectedIndex:3];
+    [self.tabBarController setSelectedIndex:2];
 }
 
 
