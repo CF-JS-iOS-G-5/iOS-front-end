@@ -13,6 +13,8 @@
 #import "BusinessTimeAPI.h"
 
 @interface HomeViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *createCardButton;
+@property (weak, nonatomic) IBOutlet UIButton *myCardsButton;
 
 @end
 
@@ -23,10 +25,18 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [BusinessTimeAPI postCloudKitID:appDelegate.iToken  andCompletion:^(User *user) {
         NSLog(@"User: %@", user);
+        [self styleHomeButtons];
     }];
     
     
 }
+
+-(void)styleHomeButtons {
+    self.createCardButton.layer.cornerRadius = 4;
+    self.myCardsButton.layer.cornerRadius = 4;
+}
+
+
 - (IBAction)createCardButtonPressed:(id)sender {
     
 //    CardCreatorViewController *cardCreatorViewController = [[CardCreatorViewController alloc] init];
