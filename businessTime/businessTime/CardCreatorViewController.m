@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *skillsTextField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UITextField *socialMediaTextField;
 @property (weak, nonatomic) IBOutlet UITextField *companyNameTextField;
 
 
@@ -68,7 +67,6 @@
     newCard.skills = self.skillsTextField.text;
     newCard.phoneNumber = self.phoneNumberTextField.text;
     newCard.email = self.emailTextField.text;
-    newCard.socialMedia = self.socialMediaTextField.text;
     newCard.companyName = self.companyNameTextField.text;
     
     NSLog(@"NEW CARD: %@", newCard);

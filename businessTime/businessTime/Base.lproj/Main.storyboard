@@ -98,7 +98,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
                                         <rect key="frame" x="8" y="153" width="132" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -109,12 +109,6 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="144" id="hp9-jH-8PE"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social Media" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-6Z-2PJ">
-                                        <rect key="frame" x="8" y="191" width="313" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -135,20 +129,16 @@
                                 <color key="backgroundColor" red="0.42079890889999999" green="0.38911351869999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="d6j-Ii-Nh9" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="top" constant="8" id="25P-yz-5QW"/>
-                                    <constraint firstItem="HkY-6Z-2PJ" firstAttribute="top" secondItem="EFX-fP-zd2" secondAttribute="bottom" constant="8" symbolic="YES" id="2Yg-2B-Ur0"/>
                                     <constraint firstItem="Fws-wr-5G0" firstAttribute="top" secondItem="MZN-3Y-FQF" secondAttribute="bottom" constant="16" id="5TK-jk-tuD"/>
                                     <constraint firstItem="MZN-3Y-FQF" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="8" id="GbN-uI-ElT"/>
-                                    <constraint firstAttribute="trailing" secondItem="HkY-6Z-2PJ" secondAttribute="trailing" constant="38" id="IGy-rG-jRw"/>
                                     <constraint firstAttribute="trailing" secondItem="Fws-wr-5G0" secondAttribute="trailing" constant="49" id="J0a-qJ-BTp"/>
                                     <constraint firstItem="d6j-Ii-Nh9" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="8" id="PJF-KV-UKg"/>
                                     <constraint firstItem="MZN-3Y-FQF" firstAttribute="top" secondItem="Lcp-Ed-Wd8" secondAttribute="bottom" constant="8" id="Pao-g9-saR"/>
                                     <constraint firstItem="7MZ-6e-jlI" firstAttribute="top" secondItem="d6j-Ii-Nh9" secondAttribute="bottom" constant="8" id="QJu-Lt-GOm"/>
                                     <constraint firstItem="MZN-3Y-FQF" firstAttribute="leading" secondItem="EFX-fP-zd2" secondAttribute="leading" id="R67-UF-hdp"/>
                                     <constraint firstAttribute="trailing" secondItem="Lcp-Ed-Wd8" secondAttribute="trailing" constant="8" id="TzO-mQ-zFZ"/>
-                                    <constraint firstItem="HkY-6Z-2PJ" firstAttribute="top" secondItem="Fws-wr-5G0" secondAttribute="bottom" constant="8" symbolic="YES" id="Vhd-Pc-jsm"/>
                                     <constraint firstAttribute="trailing" secondItem="MZN-3Y-FQF" secondAttribute="trailing" constant="77" id="ZS1-mA-2zB"/>
                                     <constraint firstItem="Lcp-Ed-Wd8" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="top" constant="8" id="eBg-XQ-tfH"/>
-                                    <constraint firstItem="MZN-3Y-FQF" firstAttribute="leading" secondItem="HkY-6Z-2PJ" secondAttribute="leading" id="oDc-cp-ZtN"/>
                                     <constraint firstItem="7MZ-6e-jlI" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="8" id="qBN-xp-OP8"/>
                                     <constraint firstItem="Lcp-Ed-Wd8" firstAttribute="leading" secondItem="7MZ-6e-jlI" secondAttribute="trailing" constant="25" id="vEE-qB-6Zc"/>
                                     <constraint firstItem="Fws-wr-5G0" firstAttribute="leading" secondItem="EFX-fP-zd2" secondAttribute="trailing" constant="26" id="yot-ST-kKd"/>
@@ -193,7 +183,6 @@
                         <outlet property="fullNameTextField" destination="d6j-Ii-Nh9" id="BNS-Pf-gkg"/>
                         <outlet property="phoneNumberTextField" destination="EFX-fP-zd2" id="gby-Kk-JZR"/>
                         <outlet property="skillsTextField" destination="MZN-3Y-FQF" id="4av-tY-X8M"/>
-                        <outlet property="socialMediaTextField" destination="HkY-6Z-2PJ" id="ZQG-4G-CZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0h-kR-sQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,7 +255,7 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9H-sQ-YIh">
-                                <rect key="frame" x="127.5" y="513" width="120" height="45"/>
+                                <rect key="frame" x="127.5" y="562" width="120" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="aQy-HV-hO5"/>
