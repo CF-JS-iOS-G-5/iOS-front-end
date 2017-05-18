@@ -8,6 +8,7 @@
 
 #import "MyCardsViewController.h"
 #import "MyCards.h"
+#import "BusinessTimeAPI.h"
 
 @interface MyCardsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -23,7 +24,9 @@
     
     self.collectionView.delegate = self;
     
-    //PASS IMAGES HERE
+    [BusinessTimeAPI getAllCardsForUser:@"591d1a72f002c90004150dd0" andCompletion:^(MyCards *cards) {
+        NSLog(@"REACHED MY CARDS VIEW CONTROLLER");
+    }];
     [self.collectionView reloadData];
 }
 

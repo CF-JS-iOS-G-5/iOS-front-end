@@ -12,7 +12,7 @@
 @implementation BusinessTimeAPI
 
 +(void)fetchAllMeetupsForLanguage:(NSString *)language andZip:(NSString *)zip andCompletion:(MeetupCompletion)completion {
-
+    
     NSString *urlString = [NSString stringWithFormat:@"https://api.meetup.com/find/events?text='%@'", language];
     
     NSURL *databaseURL = [NSURL URLWithString:urlString];
@@ -37,13 +37,13 @@
             NSLog(@"Success fetching meetups!");
         }
         
-    
+        
         
     }] resume];
 }
 
 +(void)postCloudKitID:(NSString *)cloudKitId andCompletion:(CloudKitCompletion)completion{
-
+    
     NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user"];
     
     NSURL *databaseURL = [NSURL URLWithString:urlString];
@@ -58,8 +58,8 @@
     NSData *tokenData = [NSJSONSerialization dataWithJSONObject:cloudKitToken options:0 error:&tokenSerializationError];
     
     NSLog(@"TOKEN DATA: %@", tokenData);
-
-
+    
+    
     if (tokenSerializationError) {
         NSLog(@"Error serializing token: %@", tokenSerializationError.localizedDescription);
     }
@@ -105,7 +105,7 @@
 }
 
 +(void)postCard:(MyCards *)card andCompletion:(CardCompletion)completion {
-
+    
     NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user/%@/card", [[NSUserDefaults standardUserDefaults] objectForKey:@"kUserId"]];
     
     NSURL *databaseURL = [NSURL URLWithString:urlString];
@@ -141,5 +141,37 @@
         }
     }] resume];
     
+}
+
++(void)getAllCardsForUser:(NSString *)userId andCompletion:(GetCardsCompletion)completion {
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user/%@/card", userId];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: urlString]];
+    [request setHTTPMethod:@"GET"];
+    
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+//    NSURL *databaseURL = [NSURL URLWithString:urlString];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSError *getCardError;
+        
+        NSString *decodedData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+        
+        NSArray *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&getCardError];
+        
+        NSLog(@"GET CARD ROOT OBJECT: %@", rootObject);
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+            NSLog(@"%@", httpResponse);
+        }
+    }] resume];
 }
 @end
