@@ -14,15 +14,8 @@
     self = [super init];
     
     if (self) {
-        _userId = jsonDictionary[@"userId"];
-        _name = jsonDictionary[@"name"];
-        _bio = jsonDictionary[@"bio"];
-        _latitude = jsonDictionary[@"lat"];
-        _longitude = jsonDictionary[@"lon"];
-        _city = jsonDictionary[@"city"];
-        _state = jsonDictionary[@"state"];
-        _countryName = jsonDictionary[@"localized_country_name"];
-
+        _userId = jsonDictionary[@"_id"];
+        _iToken = jsonDictionary[@"iToken"];
     }
     return self;
 }

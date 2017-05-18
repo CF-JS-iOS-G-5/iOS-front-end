@@ -58,7 +58,7 @@
     
     NSLog(@"TOKEN DATA: %@", tokenData);
 
-    
+
     if (tokenSerializationError) {
         NSLog(@"Error serializing token: %@", tokenSerializationError.localizedDescription);
     }
@@ -77,7 +77,9 @@
         NSLog(@"%@", [[NSString alloc]initWithData:data encoding:kCFStringEncodingUTF8]);
         
         
-        NSString *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&readingUserError];
+        NSDictionary *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&readingUserError];
+        
+        User *user = [[User alloc]initWithDictionary:rootObject];
         
         NSLog(@"ROOT OBJECT: %@", rootObject);
         
@@ -90,16 +92,16 @@
         } else {
             NSLog(@"Success posting cloudkit id!");
         }
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                completion(user);
+            });
+        }
     }] resume];
-    if (completion) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            NSLog(@"Reached completion");
-        });
-    }
 }
 
-+(void)postUUID:(NSString *)UUID andCompletion:(UUIDCompletion)completion {
++(void)postCard:(NSData *)card andCompletion:(CardCompletion)completion {
 
     NSString *urlString = [NSString stringWithFormat:@"https://businesstime.herokuapp.com/api/user"];
     
@@ -108,7 +110,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:databaseURL];
     request.HTTPMethod = @"POST";
     
-    NSData *data = [NSJSONSerialization dataWithJSONObject:@{@"userID": UUID} options:0 error:nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:@{@"userID": card} options:0 error:nil];
     
     request.HTTPBody = data;
     
@@ -116,14 +118,12 @@
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
     
-    NSError *UUIDError;
-    
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
-            NSLog(@"Error sending UUID: %@", error.localizedDescription);
+            NSLog(@"Error sending card: %@", error.localizedDescription);
         } else {
-            NSLog(@"Success posting uuid!");
+            NSLog(@"Success posting card!");
         }
         
     }] resume];

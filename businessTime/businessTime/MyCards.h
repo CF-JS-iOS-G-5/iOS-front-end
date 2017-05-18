@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MyCards : NSObject
+
+@property(strong, nonatomic)NSString *userId;
+@property(strong, nonatomic)NSData *cardJPG;
 
 @end
