@@ -7,6 +7,7 @@
 //
 
 #import "BusinessTimeAPI.h"
+#import "MyCards.h"
 
 @implementation BusinessTimeAPI
 
@@ -83,6 +84,8 @@
         
         NSLog(@"ROOT OBJECT: %@", rootObject);
         
+        [[NSUserDefaults standardUserDefaults]setObject:rootObject[@"_id"] forKey:@"kUserId"];
+        
         if (readingUserError) {
             NSLog(@"Error reading user: %@", readingUserError.localizedDescription);
         }
@@ -101,18 +104,20 @@
     }] resume];
 }
 
-+(void)postCard:(NSData *)card andCompletion:(CardCompletion)completion {
++(void)postCard:(MyCards *)card andCompletion:(CardCompletion)completion {
 
-    NSString *urlString = [NSString stringWithFormat:@"https://businesstime.herokuapp.com/api/user"];
+    NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user/%@/card", [[NSUserDefaults standardUserDefaults] objectForKey:@"kUserId"]];
     
     NSURL *databaseURL = [NSURL URLWithString:urlString];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:databaseURL];
     request.HTTPMethod = @"POST";
     
-    NSData *data = [NSJSONSerialization dataWithJSONObject:@{@"userID": card} options:0 error:nil];
+    NSDictionary *cardDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:card.userId, @"userId",  card.cardJPG, @"picData", nil];
+    NSLog(@"%@", cardDictionary);
+    NSData *cardData = [NSJSONSerialization dataWithJSONObject:cardDictionary options:0 error:nil];
     
-    request.HTTPBody = data;
+    request.HTTPBody = cardData;
     
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
@@ -124,8 +129,16 @@
             NSLog(@"Error sending card: %@", error.localizedDescription);
         } else {
             NSLog(@"Success posting card!");
+            NSLog(@"Response: %@ ", response);
         }
-        
+        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"STR: %@", str);
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                completion(response);
+            });
+        }
     }] resume];
     
 }

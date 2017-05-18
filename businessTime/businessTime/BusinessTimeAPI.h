@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Meetup.h"
 #import "User.h"
+#import "MyCards.h"
 
 typedef void(^MeetupCompletion)(NSArray <Meetup *> *allMeetups);
 typedef void(^CardCompletion)(NSURLResponse *response);
@@ -18,7 +19,7 @@ typedef void(^CloudKitCompletion)(User *user);
 
 +(void)fetchAllMeetupsForLanguage:(NSString *)language andZip:(NSString *)zip andCompletion:(MeetupCompletion)completion;
 
-+(void)postCard:(NSString *)card andCompletion:(CardCompletion)completion;
++(void)postCard:(MyCards *)card andCompletion:(CardCompletion)completion;
 
 +(void)postCloudKitID:(NSString *)cloudKitId andCompletion:(CloudKitCompletion)completion;
 
