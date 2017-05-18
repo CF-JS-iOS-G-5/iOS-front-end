@@ -388,6 +388,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="hqP-nI-4sL" kind="relationship" relationship="viewControllers" id="rRu-4b-kxc"/>
@@ -477,7 +480,7 @@
         <image name="businessTimeHome" width="993" height="1247"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1YP-m3-ETc"/>
-        <segue reference="ecK-6z-6sn"/>
+        <segue reference="h19-wq-Dge"/>
+        <segue reference="FuH-LD-WQe"/>
     </inferredMetricsTieBreakers>
 </document>
