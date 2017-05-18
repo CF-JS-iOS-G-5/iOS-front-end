@@ -74,7 +74,7 @@
                             <constraint firstItem="UGc-vM-Fry" firstAttribute="top" secondItem="LeS-fH-0uq" secondAttribute="bottom" constant="-11" id="tmC-Zc-Z2q"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="HWZ-qd-Mav"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icon" selectedImage="icon" id="HWZ-qd-Mav"/>
                     <connections>
                         <outlet property="createCardButton" destination="QaN-aO-bvX" id="Udt-1f-3JN"/>
                         <outlet property="myCardsButton" destination="3vG-uk-jd2" id="rji-AB-Uew"/>
@@ -180,7 +180,7 @@
                             <constraint firstItem="lzI-N9-PzZ" firstAttribute="leading" secondItem="DDZ-MY-hfx" secondAttribute="leading" constant="8" id="qvY-vj-27f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create" id="a8Z-tp-MuJ"/>
+                    <tabBarItem key="tabBarItem" title="Create" image="add_business_card_symbol" selectedImage="add_business_card_symbol" id="a8Z-tp-MuJ"/>
                     <connections>
                         <outlet property="cardUserImageView" destination="lzI-N9-PzZ" id="vuY-Mg-uhn"/>
                         <outlet property="cardView" destination="lzI-N9-PzZ" id="knI-L3-kCy"/>
@@ -370,7 +370,7 @@
                             <constraint firstItem="yXh-CS-0un" firstAttribute="top" secondItem="CRB-je-WKT" secondAttribute="bottom" constant="8" id="fhC-D6-fho"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Cards" id="qZz-tV-b3a"/>
+                    <tabBarItem key="tabBarItem" title="My Cards" image="business_cards_database" selectedImage="business_cards_database" id="qZz-tV-b3a"/>
                     <connections>
                         <outlet property="collectionView" destination="yXh-CS-0un" id="Tl1-G9-m5C"/>
                     </connections>
@@ -477,10 +477,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add_business_card_symbol" width="21" height="21"/>
         <image name="businessTimeHome" width="993" height="1247"/>
+        <image name="business_cards_database" width="21" height="21"/>
+        <image name="icon" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h19-wq-Dge"/>
-        <segue reference="FuH-LD-WQe"/>
+        <segue reference="1YP-m3-ETc"/>
+        <segue reference="ecK-6z-6sn"/>
     </inferredMetricsTieBreakers>
 </document>
