@@ -16,7 +16,7 @@
 @interface MyCardsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property(strong, nonatomic)NSArray *allCards;
+
 
 
 @end
@@ -29,6 +29,11 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
+    }
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     __weak typeof(self) bruce = self;
     [BusinessTimeAPI getAllCardsForUser:appDelegate.userId andCompletion:^(NSArray<MyCards *> *cards) {
@@ -36,6 +41,7 @@
         hulk.allCards = cards;
         [self.collectionView reloadData];
     }];
+
 }
 
 - (UIImage *)getImageFromString:(NSString *)dataString {
