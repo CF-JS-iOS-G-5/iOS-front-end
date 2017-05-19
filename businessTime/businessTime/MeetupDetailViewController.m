@@ -8,7 +8,7 @@
 
 #import "MeetupDetailViewController.h"
 
-@interface MeetupDetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MeetupDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(strong, nonatomic)NSMutableArray *allMeetups;
@@ -18,15 +18,15 @@
 
 @implementation MeetupDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.allMeetups = [[NSMutableArray alloc]init];
-    
-    
-}
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    
+//    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
+//    self.allMeetups = [[NSMutableArray alloc]init];
+//    
+//    
+//}
 
 //-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //    return [self.allMeetups count];

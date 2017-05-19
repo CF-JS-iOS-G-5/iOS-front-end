@@ -19,9 +19,6 @@ typedef void(^DeleteCardCompletion)(MyCards *cardToDelete);
 
 @interface BusinessTimeAPI : NSObject
 
-
-+(void)fetchAllMeetupsForLanguage:(NSString *)language andZip:(NSString *)zip andCompletion:(MeetupCompletion)completion;
-
 +(void)postCard:(MyCards *)card andCompletion:(CardCompletion)completion;
 
 +(void)postCloudKitID:(NSString *)cloudKitId andCompletion:(CloudKitCompletion)completion;
