@@ -9,11 +9,15 @@
 #import "MyCardsViewController.h"
 #import "MyCards.h"
 #import "BusinessTimeAPI.h"
+#import "AppDelegate.h"
+#import <UIKit/UIKit.h>
+#import "GalleryCell.h"
 
 @interface MyCardsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property(strong, nonatomic)NSArray *allCards;
+
 
 @end
 
@@ -23,11 +27,22 @@
     [super viewDidLoad];
     
     self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
     
-    [BusinessTimeAPI getAllCardsForUser:@"591d1a72f002c90004150dd0" andCompletion:^(MyCards *cards) {
-        NSLog(@"REACHED MY CARDS VIEW CONTROLLER");
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    __weak typeof(self) bruce = self;
+    [BusinessTimeAPI getAllCardsForUser:appDelegate.userId andCompletion:^(NSArray<MyCards *> *cards) {
+        __strong typeof(bruce) hulk = bruce;
+        hulk.allCards = cards;
     }];
     [self.collectionView reloadData];
+}
+
+- (UIImage *)getImageFromString:(NSString *)dataString {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:dataString
+                                                      options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    UIImage *img = [UIImage imageWithData:data];
+    return img;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -35,14 +50,15 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIndentifier = @"cell";
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIndentifier forIndexPath:indexPath];
+    GalleryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    NSString *cardImage = [self.allCards objectAtIndex:indexPath.row];
+    MyCards *card = [self.allCards objectAtIndex:indexPath.row];
     
+    UIImage *cardImage = [self getImageFromString:card.cardJPG];
     
-    //POPULATE CELL WITH IMAGES HERE
+    cell.cardImageView.image = cardImage;
+    
     return cell;
 
 }

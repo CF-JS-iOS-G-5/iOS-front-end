@@ -22,5 +22,6 @@
 
 
 -(instancetype)initWithUserId:(NSString *)userId andCardJPG:(NSString *)cardJPG;
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end

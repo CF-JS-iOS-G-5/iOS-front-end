@@ -14,5 +14,7 @@
 
 @property(strong, nonatomic)NSString *iToken;
 
+@property(strong,nonatomic)NSString *userId;
+
 @end
 

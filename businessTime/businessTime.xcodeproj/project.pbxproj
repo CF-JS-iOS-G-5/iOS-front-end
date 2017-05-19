@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5010ADB61ECCC32800412C52 /* BusinessTimeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5010ADB51ECCC32800412C52 /* BusinessTimeAPI.m */; };
+		5010ADB91ECE75FB00412C52 /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5010ADB81ECE75FB00412C52 /* GalleryCell.m */; };
 		5014A6A21ECBAE5B00C3C36A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */; };
 		5014A6A51ECBD75400C3C36A /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014A6A41ECBD75400C3C36A /* MeetupDetailViewController.m */; };
 		50ADCCAC1ECA49FF00AA37F3 /* CardCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADCCAB1ECA49FF00AA37F3 /* CardCreator.m */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		5010ADB41ECCC32800412C52 /* BusinessTimeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessTimeAPI.h; sourceTree = "<group>"; };
 		5010ADB51ECCC32800412C52 /* BusinessTimeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessTimeAPI.m; sourceTree = "<group>"; };
+		5010ADB71ECE75FB00412C52 /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
+		5010ADB81ECE75FB00412C52 /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
 		5014A69E1ECBAE0D00C3C36A /* businessTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = businessTime.entitlements; sourceTree = "<group>"; };
 		5014A6A11ECBAE5B00C3C36A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		5014A6A31ECBD75400C3C36A /* MeetupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupDetailViewController.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 			children = (
 				7F2100641ECA2DD80034A100 /* LaunchScreen.storyboard */,
 				7F21005F1ECA2DD80034A100 /* Main.storyboard */,
+				5010ADB71ECE75FB00412C52 /* GalleryCell.h */,
+				5010ADB81ECE75FB00412C52 /* GalleryCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				50ADCCC61ECA750500AA37F3 /* AuthManager.m in Sources */,
 				50ADCCBB1ECA4CD000AA37F3 /* UserViewController.m in Sources */,
 				7F21005B1ECA2DD80034A100 /* AppDelegate.m in Sources */,
+				5010ADB91ECE75FB00412C52 /* GalleryCell.m in Sources */,
 				50ADCCB81ECA4CC000AA37F3 /* MyCardsViewController.m in Sources */,
 				7F2100581ECA2DD80034A100 /* main.m in Sources */,
 				50ADCCAF1ECA4A1800AA37F3 /* MyCards.m in Sources */,
