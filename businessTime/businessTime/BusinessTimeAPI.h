@@ -15,6 +15,7 @@ typedef void(^MeetupCompletion)(NSArray <Meetup *> *allMeetups);
 typedef void(^CardCompletion)(NSURLResponse *response);
 typedef void(^CloudKitCompletion)(User *user);
 typedef void(^GetCardsCompletion)(NSArray<MyCards *> *cards);
+typedef void(^DeleteCardCompletion)(MyCards *cardToDelete);
 
 @interface BusinessTimeAPI : NSObject
 
@@ -26,5 +27,7 @@ typedef void(^GetCardsCompletion)(NSArray<MyCards *> *cards);
 +(void)postCloudKitID:(NSString *)cloudKitId andCompletion:(CloudKitCompletion)completion;
 
 +(void)getAllCardsForUser:(NSString *)userId andCompletion:(GetCardsCompletion)completion;
+
++(void)deleteCard:(MyCards *)card andCompletion:(DeleteCardCompletion)completion;
 
 @end

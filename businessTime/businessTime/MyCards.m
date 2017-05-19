@@ -24,8 +24,9 @@
     self = [super init];
     
     if (self) {
-        _userId = jsonDictionary[@"_id"];
+        _userId = jsonDictionary[@"userId"];
         _cardJPG = jsonDictionary[@"picData"];
+        _cardId = jsonDictionary[@"_id"];
     }
     return self;
 }

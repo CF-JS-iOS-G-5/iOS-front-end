@@ -23,7 +23,7 @@
 
 @implementation MyCardsViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     
     self.collectionView.delegate = self;
@@ -44,11 +44,29 @@
 
 }
 
-- (UIImage *)getImageFromString:(NSString *)dataString {
+-(UIImage *)getImageFromString:(NSString *)dataString {
     NSData *data = [[NSData alloc]initWithBase64EncodedString:dataString
                                                       options:NSDataBase64DecodingIgnoreUnknownCharacters];
     UIImage *img = [UIImage imageWithData:data];
     return img;
+}
+
+-(void)userDidSwipe:(UIGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+      
+        CGPoint point = [sender locationInView:self.collectionView];
+        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
+        MyCards *card = self.allCards[indexPath.row];
+        [self.collectionView performBatchUpdates:^{
+            [self.allCards removeObjectAtIndex:indexPath.row];
+            
+            NSArray *itemPaths = @[indexPath];
+            [self.collectionView deleteItemsAtIndexPaths:itemPaths];
+            
+        } completion:nil];
+        
+        [BusinessTimeAPI deleteCard:card andCompletion:nil];
+    }
 }
 
 -(void)share:(UILongPressGestureRecognizer *)sender {
@@ -65,6 +83,7 @@
     activityViewControntroller.excludedActivityTypes = excludedActivities;
     
         [self presentViewController:activityViewControntroller animated:true completion:nil];
+
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -85,6 +104,9 @@
     
     [cell addGestureRecognizer:longPressGestureRecognizer];
     
+    UISwipeGestureRecognizer* sender = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userDidSwipe:)];
+    [sender setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [cell addGestureRecognizer:sender];
     
     return cell;
 

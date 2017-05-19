@@ -10,6 +10,6 @@
 
 @interface MyCardsViewController : UIViewController
 
-@property(strong, nonatomic)NSArray *allCards;
+@property(strong, nonatomic)NSMutableArray *allCards;
 
 @end
