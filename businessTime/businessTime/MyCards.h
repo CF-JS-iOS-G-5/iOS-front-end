@@ -13,6 +13,7 @@
 
 @property(strong, nonatomic)NSString *userId;
 @property(strong, nonatomic)NSString *cardJPG;
+@property(strong, nonatomic)NSString *cardId;
 
 @property(strong, nonatomic)NSString *fullName;
 @property(strong, nonatomic)NSString *companyName;

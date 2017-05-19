@@ -157,4 +157,30 @@
         }
     }] resume];
 }
+
++(void)deleteCard:(MyCards *)card andCompletion:(DeleteCardCompletion)completion{
+    NSString *cardId = card.cardId;
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://business-time-test.herokuapp.com/api/user/%@/card/%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"kUserId"], cardId];
+    
+    NSURL *databaseURL = [NSURL URLWithString:urlString];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:databaseURL];
+    
+    request.HTTPMethod = @"DELETE";
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            NSLog(@"%@", response);
+        }
+        
+    }] resume];
+}
+
+
 @end
