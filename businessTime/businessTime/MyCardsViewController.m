@@ -34,8 +34,8 @@
     [BusinessTimeAPI getAllCardsForUser:appDelegate.userId andCompletion:^(NSArray<MyCards *> *cards) {
         __strong typeof(bruce) hulk = bruce;
         hulk.allCards = cards;
+        [self.collectionView reloadData];
     }];
-    [self.collectionView reloadData];
 }
 
 - (UIImage *)getImageFromString:(NSString *)dataString {
