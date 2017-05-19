@@ -40,7 +40,7 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    NSData *imageData = UIImagePNGRepresentation(image);
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.2);
 
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     NSString *dataString = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
