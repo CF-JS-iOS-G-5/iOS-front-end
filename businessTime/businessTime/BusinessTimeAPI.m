@@ -8,39 +8,10 @@
 
 #import "BusinessTimeAPI.h"
 #import "MyCards.h"
+#import "AppDelegate.h"
 
 @implementation BusinessTimeAPI
 
-+(void)fetchAllMeetupsForLanguage:(NSString *)language andZip:(NSString *)zip andCompletion:(MeetupCompletion)completion {
-    
-    NSString *urlString = [NSString stringWithFormat:@"https://api.meetup.com/find/events?text='%@'", language];
-    
-    NSURL *databaseURL = [NSURL URLWithString:urlString];
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
-    
-    [[session dataTaskWithURL:databaseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        NSError *APIerror;
-        
-        NSArray *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&APIerror];
-        
-        NSMutableArray *allMeetups = [[NSMutableArray alloc] init];
-        
-        for (NSDictionary *meetup in rootObject) {
-            //GET MEETUPS HERE
-        }
-        
-        if (APIerror) {
-            NSLog(@"Error with rootObject: %@", APIerror.localizedDescription);
-        } else {
-            NSLog(@"Success fetching meetups!");
-        }
-        
-        
-        
-    }] resume];
-}
 
 +(void)postCloudKitID:(NSString *)cloudKitId andCompletion:(CloudKitCompletion)completion{
     
@@ -74,7 +45,7 @@
         
         NSError *readingUserError;
         
-        NSLog(@"RESPONSE: %@", response);
+//        NSLog(@"RESPONSE: %@", response);
         NSLog(@"%@", [[NSString alloc]initWithData:data encoding:kCFStringEncodingUTF8]);
         
         
@@ -82,7 +53,10 @@
         
         User *user = [[User alloc]initWithDictionary:rootObject];
         
-        NSLog(@"ROOT OBJECT: %@", rootObject);
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDelegate.userId = user.userId;
+        
+//        NSLog(@"ROOT OBJECT: %@", rootObject);
         
         [[NSUserDefaults standardUserDefaults]setObject:rootObject[@"_id"] forKey:@"kUserId"];
         
@@ -114,7 +88,7 @@
     request.HTTPMethod = @"POST";
     
     NSDictionary *cardDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:card.userId, @"userId",  card.cardJPG, @"picData", nil];
-    NSLog(@"%@", cardDictionary);
+//    NSLog(@"%@", cardDictionary);
     NSData *cardData = [NSJSONSerialization dataWithJSONObject:cardDictionary options:0 error:nil];
     
     request.HTTPBody = cardData;
@@ -129,7 +103,7 @@
             NSLog(@"Error sending card: %@", error.localizedDescription);
         } else {
             NSLog(@"Success posting card!");
-            NSLog(@"Response: %@ ", response);
+//            NSLog(@"Response: %@ ", response);
         }
         NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"STR: %@", str);
@@ -165,7 +139,6 @@
         
         for (NSDictionary *userCard in rootObject) {
             MyCards *card = [[MyCards alloc]initWithDictionary:userCard];
-//            NSLog(@"CONVERTED CARD ID: %@", card.userId);
             [cards addObject:card];
             NSLog(@"CARDS.COUNT: %lu", (unsigned long)cards.count);
         }
@@ -174,7 +147,7 @@
             NSLog(@"%@", error);
         } else {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            NSLog(@"%@", httpResponse);
+//            NSLog(@"%@", httpResponse);
         }
         
         if (completion) {
