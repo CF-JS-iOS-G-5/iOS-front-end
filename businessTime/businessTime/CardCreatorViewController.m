@@ -10,7 +10,7 @@
 #import "MyCards.h"
 #import "BusinessTimeAPI.h"
 
-@interface CardCreatorViewController ()
+@interface CardCreatorViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *fullNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *skillsTextField;
@@ -28,6 +28,12 @@
     [super viewDidLoad];
     
     [self styleSaveButton];
+    
+    self.fullNameTextField.delegate = self;
+    self.skillsTextField.delegate = self;
+    self.phoneNumberTextField.delegate = self;
+    self.emailTextField.delegate = self;
+    self.companyNameTextField.delegate = self;
 }
 
 #pragma MARK Image Snapshot
@@ -78,5 +84,20 @@
     }];
 }
 
+#pragma MARK text field methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    return YES;
+}
+
+// hide the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[self view] endEditing:YES];
+}
 
 @end
