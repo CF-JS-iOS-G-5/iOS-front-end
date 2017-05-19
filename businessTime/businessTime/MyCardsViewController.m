@@ -51,6 +51,22 @@
     return img;
 }
 
+-(void)share:(UILongPressGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
+    
+    GalleryCell *cell = (GalleryCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    
+    UIImage *image = cell.cardImageView.image;
+    
+    NSArray *activityItems = @[image];
+    UIActivityViewController *activityViewControntroller = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    NSArray *excludedActivities = @[UIActivityTypePostToTwitter, UIActivityTypePostToFacebook, UIActivityTypePostToWeibo, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypePostToFlickr, UIActivityTypePostToVimeo, UIActivityTypePostToTencentWeibo];
+    activityViewControntroller.excludedActivityTypes = excludedActivities;
+    
+        [self presentViewController:activityViewControntroller animated:true completion:nil];
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.allCards.count;
 }
@@ -64,6 +80,11 @@
     UIImage *cardImage = [self getImageFromString:card.cardJPG];
     
     cell.cardImageView.image = cardImage;
+    
+    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(share:)];
+    
+    [cell addGestureRecognizer:longPressGestureRecognizer];
+    
     
     return cell;
 
