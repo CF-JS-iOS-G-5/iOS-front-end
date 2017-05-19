@@ -124,10 +124,10 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="businessCardTemplateOne" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-Ce-IBT">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="227"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6j-Ii-Nh9">
-                                        <rect key="frame" x="15" y="15" width="183" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6j-Ii-Nh9">
+                                        <rect key="frame" x="15" y="15" width="255" height="37"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="32"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placedholderLabel.textColor">
@@ -135,60 +135,51 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZN-3Y-FQF">
-                                        <rect key="frame" x="15" y="53" width="150" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZN-3Y-FQF">
+                                        <rect key="frame" x="15" y="54" width="150" height="33"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="27"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
-                                        <rect key="frame" x="15" y="148" width="132" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-fP-zd2">
+                                        <rect key="frame" x="15" y="148" width="132" height="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-Ed-Wd8">
-                                        <rect key="frame" x="248" y="8" width="103" height="91"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="91" id="rUr-Qu-8gx"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MZ-6e-jlI">
-                                        <rect key="frame" x="15" y="91" width="150" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MZ-6e-jlI">
+                                        <rect key="frame" x="15" y="95" width="150" height="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fws-wr-5G0">
-                                        <rect key="frame" x="15" y="186" width="180" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fws-wr-5G0">
+                                        <rect key="frame" x="15" y="187" width="180" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="hp9-jH-8PE"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Wg6-Ce-IBT" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="top" id="0Nu-VJ-yC1"/>
-                                    <constraint firstItem="d6j-Ii-Nh9" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="top" constant="15" id="25P-yz-5QW"/>
                                     <constraint firstItem="7MZ-6e-jlI" firstAttribute="top" secondItem="MZN-3Y-FQF" secondAttribute="bottom" constant="8" symbolic="YES" id="46o-Nf-Pp1"/>
-                                    <constraint firstItem="d6j-Ii-Nh9" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="15" id="8gq-eD-jsw"/>
-                                    <constraint firstItem="Lcp-Ed-Wd8" firstAttribute="leading" secondItem="d6j-Ii-Nh9" secondAttribute="trailing" constant="50" id="BOt-h4-tfu"/>
+                                    <constraint firstItem="d6j-Ii-Nh9" firstAttribute="leading" secondItem="MZN-3Y-FQF" secondAttribute="leading" id="E18-kb-are"/>
                                     <constraint firstItem="EFX-fP-zd2" firstAttribute="baseline" secondItem="Fws-wr-5G0" secondAttribute="baseline" constant="-38" id="FXl-bd-60b"/>
                                     <constraint firstItem="MZN-3Y-FQF" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="15" id="GbN-uI-ElT"/>
                                     <constraint firstAttribute="bottom" secondItem="Wg6-Ce-IBT" secondAttribute="bottom" id="HG0-Ix-uZo"/>
                                     <constraint firstAttribute="trailing" secondItem="Fws-wr-5G0" secondAttribute="trailing" constant="164" id="J0a-qJ-BTp"/>
-                                    <constraint firstItem="MZN-3Y-FQF" firstAttribute="top" secondItem="Lcp-Ed-Wd8" secondAttribute="bottom" constant="-46" id="Pao-g9-saR"/>
+                                    <constraint firstAttribute="trailing" secondItem="d6j-Ii-Nh9" secondAttribute="trailing" constant="89" id="Lgw-iK-lUo"/>
                                     <constraint firstItem="MZN-3Y-FQF" firstAttribute="leading" secondItem="EFX-fP-zd2" secondAttribute="leading" id="R67-UF-hdp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lcp-Ed-Wd8" secondAttribute="trailing" constant="8" id="TzO-mQ-zFZ"/>
                                     <constraint firstAttribute="trailing" secondItem="MZN-3Y-FQF" secondAttribute="trailing" constant="194" id="ZS1-mA-2zB"/>
                                     <constraint firstAttribute="trailing" secondItem="Wg6-Ce-IBT" secondAttribute="trailing" id="adi-vL-Qx0"/>
-                                    <constraint firstItem="Lcp-Ed-Wd8" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="top" constant="8" id="eBg-XQ-tfH"/>
+                                    <constraint firstItem="d6j-Ii-Nh9" firstAttribute="top" secondItem="lzI-N9-PzZ" secondAttribute="top" constant="15" id="jCC-oY-HIl"/>
+                                    <constraint firstItem="MZN-3Y-FQF" firstAttribute="top" secondItem="d6j-Ii-Nh9" secondAttribute="bottom" constant="2" id="lxM-hO-aLv"/>
                                     <constraint firstItem="EFX-fP-zd2" firstAttribute="top" secondItem="7MZ-6e-jlI" secondAttribute="bottom" constant="27" id="oVX-MM-9pS"/>
                                     <constraint firstItem="7MZ-6e-jlI" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" constant="15" id="qBN-xp-OP8"/>
                                     <constraint firstItem="Wg6-Ce-IBT" firstAttribute="leading" secondItem="lzI-N9-PzZ" secondAttribute="leading" id="rr4-1f-Gww"/>
-                                    <constraint firstItem="Lcp-Ed-Wd8" firstAttribute="leading" secondItem="7MZ-6e-jlI" secondAttribute="trailing" constant="83" id="vEE-qB-6Zc"/>
                                     <constraint firstItem="7MZ-6e-jlI" firstAttribute="trailing" secondItem="MZN-3Y-FQF" secondAttribute="trailing" id="yCh-Ti-6sx"/>
                                     <constraint firstItem="Fws-wr-5G0" firstAttribute="leading" secondItem="EFX-fP-zd2" secondAttribute="trailing" constant="-132" id="yot-ST-kKd"/>
                                 </constraints>
@@ -374,8 +365,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yXh-CS-0un">
-                                <rect key="frame" x="0.0" y="28" width="375" height="582"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mib-cb-R71">
                                     <size key="itemSize" width="287" height="175"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -408,8 +399,8 @@
                         <constraints>
                             <constraint firstItem="yXh-CS-0un" firstAttribute="leading" secondItem="eek-tc-7Nt" secondAttribute="leading" id="2Qa-97-AGJ"/>
                             <constraint firstAttribute="trailing" secondItem="yXh-CS-0un" secondAttribute="trailing" id="DZY-ew-9Rg"/>
-                            <constraint firstItem="hlf-SZ-sW9" firstAttribute="top" secondItem="yXh-CS-0un" secondAttribute="bottom" constant="8" id="aYt-mp-HHr"/>
-                            <constraint firstItem="yXh-CS-0un" firstAttribute="top" secondItem="CRB-je-WKT" secondAttribute="bottom" constant="8" id="fhC-D6-fho"/>
+                            <constraint firstItem="hlf-SZ-sW9" firstAttribute="top" secondItem="yXh-CS-0un" secondAttribute="bottom" id="aYt-mp-HHr"/>
+                            <constraint firstItem="yXh-CS-0un" firstAttribute="top" secondItem="CRB-je-WKT" secondAttribute="bottom" constant="-20" id="fhC-D6-fho"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Cards" image="business_cards_database" selectedImage="business_cards_database" id="qZz-tV-b3a"/>
