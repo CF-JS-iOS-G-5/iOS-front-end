@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *companyNameTextField;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 
 @end
@@ -25,7 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self styleSaveButton];
 }
 
 #pragma MARK Image Snapshot
@@ -54,8 +56,8 @@
 }
 
 
-
-- (IBAction)updateCardButtonPressed:(id)sender {
+-(void)styleSaveButton {
+    self.saveButton.layer.cornerRadius = 6;
 }
 
 - (IBAction)saveCardButtonPressed:(id)sender {

@@ -32,8 +32,8 @@
 }
 
 -(void)styleHomeButtons {
-    self.createCardButton.layer.cornerRadius = 4;
-    self.myCardsButton.layer.cornerRadius = 4;
+    self.createCardButton.layer.cornerRadius = 6;
+    self.myCardsButton.layer.cornerRadius = 6;
 }
 
 
